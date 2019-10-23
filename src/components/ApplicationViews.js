@@ -1,18 +1,24 @@
-import React, { Component } from 'react';
-// import { Route } from 'react-router-dom';
-// import OrderView from "./views/OrderView";
+// import { Route , Redirect } from 'react-router-dom'
+import { Route } from 'react-router-dom'
+import React, { Component } from 'react'
+import Login from './auth/Login'
+import Home from './home/Home'
 
-class ApplicationViews extends Component {
 
-  render() {
-    return (
-    //   <>
-    //     <Route path="/ordernow" render={props => {
-    //       return <OrderView userId={this.props.userId} />
-    //     }} />
-    //   </>
-    )
-  }
+export default class ApplicationViews extends Component {
+
+isAuthenticated = () => localStorage.getItem("credentials") !== null
+
+render() {
+  return (
+    <React.Fragment>
+        <Route exact path="/" render={(props) => {
+            return <Home />
+          }} />
+      <Route path="/login" render={props => {
+            return <Login setUser={this.props.setUser} {...props} />
+      }} />
+        </React.Fragment>
+    );
 }
-
-export default ApplicationViews;
+}
