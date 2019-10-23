@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "user_name": "summerliddington",
+      "password": "1111",
+      "sunsignId": "Taurus",
+      "birthday": "05/19/1985"
+    },
+    {
+      "id": 2,
+      "user_name": "katiejackson",
+      "password": "2222",
+      "sunsignId": "Virgo",
+      "birthday": "08/26/1985"
+    },
+    {
+      "user_name": "SageKlein",
+      "password": "4444",
+      "birthday": "1985-04-30",
+      "id": 3
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "group_name": "First Group",
+      "groupId": 1,
+      "userId": 1
+    }
+  ],
+  "groupUsers": [
+    {
+      "id": 1,
+      "groupId": 1,
+      "userId": 1
+    },
+    {
+      "id": 1,
+      "groupId": 1,
+      "userId": 2
+    }
+  ],
+  "sunsigns": [
+    {
+      "id": 1,
+      "sunsignId": 1,
+      "description": "Earthy"
+    }
+  ]
+}
