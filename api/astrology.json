@@ -1,0 +1,100 @@
+{
+    "sunsigns": [
+        {
+            "id": 1,
+            "sunsign": "Aries",
+            "start": "March",
+            "startday": 21,
+            "end": "April",
+            "endday": 20
+        },
+        {
+            "id": 2,
+            "sunsign": "Taurus",
+            "start": "April",
+            "startday": 21,
+            "end": "May",
+            "endday": 20
+        },
+        {
+            "id": 3,
+            "sunsign": "Gemini",
+            "start": "May",
+            "startday": 21,
+            "end": "June",
+            "endday": 21
+        },
+        {
+            "id": 4,
+            "sunsign": "Cancer",
+            "start": "June",
+            "startday": 22,
+            "end": "July",
+            "endday": 22
+        },
+        {
+            "id": 5,
+            "sunsign": "Leo",
+            "start": "July",
+            "startday": 23,
+            "end": "August",
+            "endday": 22
+        },
+        {
+            "id": 6,
+            "sunsign": "Virgo",
+            "start": "August",
+            "startday": 23,
+            "end": "September",
+            "endday": 22
+        },
+        {
+            "id": 7,
+            "sunsign": "Libra",
+            "start": "September",
+            "startday": 23,
+            "end": "October",
+            "endday": 22
+        },
+        {
+            "id": 8,
+            "sunsign": "Scorpio",
+            "start": "October",
+            "startday": 23,
+            "end": "November",
+            "endday": 22
+        },
+        {
+            "id": 9,
+            "sunsign": "Sagittarius",
+            "start": "November",
+            "startday": 23,
+            "end": "December",
+            "endday": 22
+        },
+        {
+            "id": 10,
+            "sunsign": "Capricorn",
+            "start": "December",
+            "startday": 23,
+            "end": "January",
+            "endday": 20
+        },
+        {
+            "id": 11,
+            "sunsign": "Aquarius",
+            "start": "January",
+            "startday": 21,
+            "end": "February",
+            "endday": 19
+        },
+        {
+            "id": 12,
+            "sunsign": "Pisces",
+            "start": "February",
+            "startday": 20,
+            "end": "March",
+            "endday": 20
+        }
+    ]
+}
