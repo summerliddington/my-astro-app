@@ -5,33 +5,41 @@ import ProfileCardManager from '../../modules/ProfileCardManager'
 // import Home from './Home'
 
 class MyProfileList extends Component {
-
     state = {
-        activeUser: parseInt(localStorage.getItem("credentials"))
+      user: true
     }
-    componentDidMount(){
-      // ProfileCardManager.getUser("users").then((getUser) => {
-      //     this.setState({
-      //         getUser: getUser
-      //     })
-      // })
+    deleteProfile = id => {
+      ProfileCardManager.delete(id)
+      .then(() => {
+          this.setState({
+              user: user
+          })
+        })
+      }
     }
+componentDidMount(){
 
-    handleDelete = (id) => {
-        ProfileCardManager.delete(id)
-        .then(() => this.props.getData());
-    }
+  ProfileCardManager.getUser()
+  .then((users) => {
+      this.setState({
+          employees: employees
+      })
+  })
+}
 
-  render() {
-    return (
-      <>
-        <h1>Profile?</h1>
-            {/* {this.state.getUser.map(user => <MyProfileCard key={user.id} user={user}/>
-                )
-            } */}
-            </>
-    );
-  }
-    }
+render(){
+
+  return(
+      <div className="container-cards">
+          {this.state.users.id(user =>
+              <MyProfileCard key={user.id}
+                  user={user}
+                  deleteUser={this.deleteUser}
+                  {...this.props}
+                  />
+          )}
+      </div>
+  )
+}
 
 export default MyProfileList;

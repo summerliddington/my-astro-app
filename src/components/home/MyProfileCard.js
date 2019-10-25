@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import {Link} from 'react-router-dom'
 
 
-class Home extends Component {
+class MyProfileCard extends Component {
   render() {
     return (
       <div className="home">
@@ -11,8 +11,9 @@ class Home extends Component {
           <h3>User Name: <span className="card-employeename">{this.props.user.user_name}</span></h3>
 
           <p>Astrology Sign: {this.props.user.sunsignId}</p>
-          <p>Birthday: {this.props.user.birthday}</p>
-          <button type="button" onClick={() => this.props.deleteProfile(this.props.user.id)}>Profile</button>
+          <p>Birthday Month: {this.props.user.birthday_month}</p>
+          <p>Birthday Month: {this.props.user.birthday_day}</p>
+          <button type="button" onClick={() => this.props.deleteProfile(this.props.user.id)}>Delete Profile</button>
           <button type="button" onClick={() => {this.props.history.push(`/${this.props.user.id}/edit`)}}>Edit</button>
         </div>
       </div>
@@ -20,4 +21,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default MyProfileCard;

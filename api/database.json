@@ -1,20 +1,12 @@
 {
   "users": [
     {
-      "user_name": "final test",
-      "password": "pass",
-      "birthday_month": "April",
-      "birthday_day": "3",
-      "sunsignId": 1,
-      "id": 15
-    },
-    {
       "user_name": "summerliddington",
       "password": "1111",
       "birthday_month": "May",
       "birthday_day": "19",
       "sunsignId": 2,
-      "id": 16
+      "id": 1
     }
   ],
   "groups": [

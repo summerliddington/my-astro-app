@@ -10,19 +10,6 @@ class Home extends Component {
     users: []
   }
 
-  getOrders = () => {
-    // APIManager.getAllOrders(this.props.userId)
-    // .then((results) => {
-    //   this.setState({
-    //     orders: results
-    //   })
-    // })
-  }
-
-  componentDidMount(){
-    this.getOrders();
-  }
-
   render(){
 
     return(
