@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 
 
-class MyProfileCard extends Component {
+class Home extends Component {
   render() {
     return (
-      <div className="profilecard">
-          <h3>Your Profile</h3>
-        <div className="card-content">
-        <h2>User Name: <span className="profilecard-info">{this.props.user.user_name}</span></h2>
-        <h2>User Name: <span className="profilecard-info">{this.props.user.sunsignId}</span></h2>
-        <h2>User Name: <span className="profilecard-info">{this.props.user.birthday}</span></h2>
+      <div className="home">
+        <div className="profile-card">
+          <h2>Your Profile!</h2>
+          <h3>User Name: <span className="card-employeename">{this.props.user.user_name}</span></h3>
 
-          <button type="button" onClick={() => this.props.deleteUser(this.props.user.id)}>Delete Profile</button>
+          <p>Astrology Sign: {this.props.user.sunsignId}</p>
+          <p>Birthday: {this.props.user.birthday}</p>
+          <button type="button" onClick={() => this.props.deleteProfile(this.props.user.id)}>Profile</button>
+          <button type="button" onClick={() => {this.props.history.push(`/${this.props.user.id}/edit`)}}>Edit</button>
         </div>
       </div>
     );
   }
 }
 
-export default MyProfileCard;
+export default Home;

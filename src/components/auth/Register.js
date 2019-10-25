@@ -5,11 +5,29 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 class Register extends Component {
 
+
+  handleAstroSign = () => {
+    let sunsignId = ""
+   return LoginManager.getAstroData().then(res => {
+      res.filter( sign => sign.start === "April" || sign.end === "April")
+      .forEach(month => {
+        if(month.start === this.state.birthday_month && parseInt(this.state.birthday_day) >= month.startday ){
+          sunsignId = month.id
+        }
+      else if (month.end === this.state.birthday_month && parseInt(this.state.birthday_day) <= month.endday ) {
+        sunsignId = month.id
+      }
+      });
+    }).then(() => this.setState({sunsignId: sunsignId}))
+  }
+
   // Set initial state
   state = {
     user_name: "",
     password: "",
-    birthday: ""
+    birthday_month: "",
+    birthday_day: "",
+    sunsignId: ""
   };
 
   handleFieldChange = (event) => {
@@ -20,32 +38,39 @@ class Register extends Component {
 
   handleRegister = (e) => {
     e.preventDefault()
-    LoginManager.getUserData().then((users) => {
+    this.handleAstroSign().then
+    (() => LoginManager.getUserData().then((users) => {
       let validate = users.find(user => user.user_name.toLowerCase() === this.state.user_name.toLowerCase())
 
       if (this.state.user_name === "") {
         window.alert("Please enter a username")
       } else if (this.state.password === "") {
         window.alert("Please enter a password")
-      } else if (this.state.birthday === "") {
-        window.alert("Please enter a valid birthday")
+      } else if (this.state.birthday_month === "") {
+        window.alert("Please enter a valid birthday month")
+      } else if (this.state.birthday_day === ""){
+        window.alert("Please enter a valid birthday day")
       } else if (validate) {
         window.alert("username already exists")
       } else {
         let newUser = {
           user_name: this.state.user_name,
           password: this.state.password,
-          birthday: this.state.birthday
+          birthday_month: this.state.birthday_month,
+          birthday_day: this.state.birthday_day,
+          sunsignId: this.state.sunsignId
         };
         LoginManager.createUser(newUser)
           .then((createdUser) => {
             //This determines which page you land on upon registration
             this.props.setUser(createdUser)
           }
+
           )
+          // .then((res) => console.log(res))
       }
     }
-    )
+    ))
   }
 
   render() {
@@ -62,10 +87,17 @@ class Register extends Component {
                 required="" autoFocus="" />
             </FormGroup>
             <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-              <Label htmlFor="birthday" className="mr-sm-2">Birthday:</Label>
-              <Input onChange={this.handleFieldChange} type="date"
-                id="birthday"
-                placeholder="month/day/year"
+              <Label htmlFor="birthday_month" className="mr-sm-2">Birthday Month:</Label>
+              <Input onChange={this.handleFieldChange} type="birthday_month"
+                id="birthday_month"
+                placeholder="month ex: April"
+                required="" autoFocus="" />
+            </FormGroup>
+            <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+              <Label htmlFor="birthday_day" className="mr-sm-2">Birthday Day:</Label>
+              <Input onChange={this.handleFieldChange} type="birthday_day"
+                id="birthday_day"
+                placeholder="day ex: 18"
                 required="" autoFocus="" />
             </FormGroup>
             <FormGroup className="mb-2 mr-sm-2 mb-sm-0">

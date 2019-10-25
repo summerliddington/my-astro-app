@@ -13,11 +13,12 @@ render() {
   return (
     <React.Fragment>
         <Route exact path="/" render={(props) => {
-            return <Home />
+            return <Home user={this.props.user} {...props} />
           }} />
       <Route path="/login" render={props => {
             return <Login setUser={this.props.setUser} {...props} />
       }} />
+
         </React.Fragment>
     );
 }
