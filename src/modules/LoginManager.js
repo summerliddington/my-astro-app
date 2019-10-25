@@ -13,5 +13,9 @@ export default {
     getUserData() {
         return fetch(`${remoteURL}/users`)
             .then(data => data.json())
+    },
+    getAstroData() {
+        return fetch(`${remoteURL}/sunsigns`)
+            .then(data => data.json())
     }
 }

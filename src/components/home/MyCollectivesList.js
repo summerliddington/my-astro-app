@@ -22,12 +22,12 @@ import React, { Component } from 'react'
     componentDidMount(){
         console.log("MY COLLECTIVES LIST: ComponentDidMount");
 
-        ProfileCardManager.getAll()
-        .then((groups) => {
-            this.setState({
-                groups: groups
-            })
-        })
+        // ProfileCardManager.getAll()
+        // .then((groups) => {
+        //     this.setState({
+        //         groups: groups
+        //     })
+        // })
     }
 
     render(){

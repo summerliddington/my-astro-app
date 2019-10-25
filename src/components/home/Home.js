@@ -11,12 +11,12 @@ class Home extends Component {
   }
 
   getOrders = () => {
-    APIManager.getAllOrders(this.props.userId)
-    .then((results) => {
-      this.setState({
-        orders: results
-      })
-    })
+    // APIManager.getAllOrders(this.props.userId)
+    // .then((results) => {
+    //   this.setState({
+    //     orders: results
+    //   })
+    // })
   }
 
   componentDidMount(){

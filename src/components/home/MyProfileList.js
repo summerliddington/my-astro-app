@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom'
+import MyProfileCard from './MyProfileCard'
 import ProfileCardManager from '../../modules/ProfileCardManager'
-import Home from './Home'
+// import Home from './Home'
 
 class MyProfileList extends Component {
 
@@ -9,11 +10,12 @@ class MyProfileList extends Component {
         activeUser: parseInt(localStorage.getItem("credentials"))
     }
     componentDidMount(){
-      ProfileCardManager.getUser("users").then((getUser) => {
-          this.setState({
-              getUser: getUser
-          })
-      })
+      // ProfileCardManager.getUser("users").then((getUser) => {
+      //     this.setState({
+      //         getUser: getUser
+      //     })
+      // })
+    }
 
     handleDelete = (id) => {
         ProfileCardManager.delete(id)
@@ -24,12 +26,12 @@ class MyProfileList extends Component {
     return (
       <>
         <h1>Profile?</h1>
-            {this.state.getUser.map(user => <MyProfileCard key={user.id} user={user}/>
+            {/* {this.state.getUser.map(user => <MyProfileCard key={user.id} user={user}/>
                 )
-            }
+            } */}
             </>
     );
   }
-}
+    }
 
 export default MyProfileList;
