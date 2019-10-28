@@ -14,7 +14,7 @@ class Home extends Component {
 
     return(
       <>
-      <MyProfileList  />
+      <MyProfileList setUser={this.props.setUser} {...this.props} clearUser={this.props.clearUser} />
       <hr />
       <JoinedCollectivesList />
       <hr />

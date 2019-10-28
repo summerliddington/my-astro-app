@@ -34,12 +34,15 @@ import React, { Component } from 'react'
         console.log("MY COLLECTIVES LIST: Render");
 
         return(
+            <>
+            <h1>My Collective List</h1>
             <div className="container-cards">
                 {this.state.groups.map(group =>
                     <MyCollectivesCard key={group.id}
                         group={group}
                         deleteGroup={this.deleteGroup}/>)}
             </div>
+            </>
         )
     }
 }

@@ -17,18 +17,7 @@
       "userId": 1
     }
   ],
-  "groupUsers": [
-    {
-      "id": 1,
-      "groupId": 1,
-      "userId": 1
-    },
-    {
-      "id": 1,
-      "groupId": 1,
-      "userId": 2
-    }
-  ],
+  "groupUsers": [],
   "sunsigns": [
     {
       "id": 1,

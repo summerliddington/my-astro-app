@@ -3,6 +3,7 @@ import NavBar from "./nav/NavBar";
 import ApplicationViews from "./ApplicationViews";
 import Login from "../components/auth/Login"
 import Register from "../components/auth/Register"
+// import { withRouter } from "react-router"
 
 
 
@@ -26,6 +27,7 @@ class LandingPage extends Component {
         user: this.isAuthenticated()
       });
     }
+
     clearUser = () => {
       localStorage.clear()
 
@@ -47,7 +49,9 @@ class LandingPage extends Component {
       <>
         <NavBar user={this.state.user} clearUser={this.clearUser} />
         <ApplicationViews user={this.state.user}
-                          setUser={this.setUser} />
+                          setUser={this.setUser}
+                          clearUser={this.clearUser}
+                          {...this.props} />
       </>
       :<><div className="logRegContainer">
       <Login setUser={this.setUser}/>

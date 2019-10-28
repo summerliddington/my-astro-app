@@ -32,6 +32,7 @@ class Login extends Component {
           window.alert("Please enter password")
       } else if (singleUser) {
           this.props.setUser(singleUser);
+          localStorage.setItem("userId", singleUser.id)
       } else {
           window.alert("User Name and Password do not match")
       }

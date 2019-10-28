@@ -34,12 +34,15 @@ import React, { Component } from 'react'
         console.log("JOINED COLLECTIVES LIST: Render");
 
         return(
+            <> 
+            <h1>Joined Collective List</h1>
             <div className="container-cards">
                 {this.state.groups.map(group =>
                     <JoinedCollectivesCard key={group.id}
                         group={group}
                         deleteGroup={this.deleteGroup}/>)}
             </div>
+            </>
         )
     }
 }
