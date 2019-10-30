@@ -3,11 +3,12 @@ import { Route } from 'react-router-dom'
 import React, { Component } from 'react'
 import Login from './auth/Login'
 import Home from './home/Home'
+import NewGroupForm from './new/NewGroupForm'
 // import MyProfileList from '../components/home/MyProfileList'
 
 export default class ApplicationViews extends Component {
 
-isAuthenticated = () => localStorage.getItem("credentials") !== null
+isAuthenticated = () => sessionStorage.getItem("credentials") !== null
 
 render() {
   return (
@@ -15,9 +16,15 @@ render() {
         <Route path="/login" render={props => {
               return <Login setUser={this.props.setUser} {...props} />
         }} />
-        <Route exact path="/" render={(props) => {
-          return <Home setUser={this.props.setUser} {...this.props} clearUser={this.props.clearUser} />
+        <Route exact path="/" render={props => {
+          return <Home setUser={this.props.setUser} currentUserId={this.props.currentUserId} {...props} />
         }} />
+        <Route path="/new" render={(props) => {
+          return <NewGroupForm {...props} />
+        }}/>
+
+
+
         {/* <Route path="MyProfileList/:userId(\d+)" render={(props) => {
           return <MyProfileList userId={parseInt(props.match.params.userId)} {...props} />
         }} />

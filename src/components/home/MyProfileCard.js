@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
-import ProfileCardManager from "../../modules/ProfileCardManager"
+// import ProfileCardManager from "../../modules/ProfileCardManager"
 // import {Link} from 'react-router-dom'
+import ProfileCardManager from '../../modules/ProfileCardManager'
 
 
 class MyProfileCard extends Component {
 
 state = {
-  loadingStatus: true
+  users: [],
+  sunsign: "",
 }
-
-
-  // handleDelete = () => {
-  //   this.setState({loadingStatus: true})
-  //   ProfileCardManager.delete(this.props.activeUserId)
-  //   .then(() => this.props.history.push("/login"))
-  // }
-
+componentDidMount= () => {
+  ProfileCardManager.getSunsign(this.props.user.sunsignId).then(res => this.setState({sunsign: res}))
+};
   render() {
+    console.log("this is the user", this.props.user.sunsign)
     return (
       <div className="profile-card">
         <div className="profile-content">
@@ -24,9 +22,9 @@ state = {
           <h2>User Name: {this.props.user.user_name}</h2>
           <h2>Birthday Month: {this.props.user.birthday_month}</h2>
           <h2>Birthday Month: {this.props.user.birthday_day}</h2>
-          <h2>Astrology Sign: {this.props.user.sunsignId}</h2>
-          {/* <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Delete Profile</button> */}
-          <button type="button" onClick={() => this.props.deleteProfile(this.props.user.id)}>Delete Profile</button>
+          { this.state.sunsign?
+          <h2>Astrology Sign: {this.state.sunsign.sunsign}</h2>
+        : ""}
           {/* <button type="button" onClick={() => {this.props.history.push(`/${this.props.user.id}/edit`)}}>Edit</button> */}
         </div>
       </div>

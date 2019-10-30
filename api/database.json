@@ -7,6 +7,22 @@
       "birthday_day": "19",
       "sunsignId": 2,
       "id": 1
+    },
+    {
+      "user_name": "mo 1",
+      "password": "pass",
+      "birthday_month": "May",
+      "birthday_day": "1",
+      "sunsignId": 2,
+      "id": 8
+    },
+    {
+      "user_name": "upper case",
+      "password": "pass",
+      "birthday_month": "March",
+      "birthday_day": "9",
+      "sunsignId": 12,
+      "id": 10
     }
   ],
   "groups": [
@@ -15,6 +31,12 @@
       "group_name": "First Group",
       "groupId": 1,
       "userId": 1
+    },
+    {
+      "id": 2,
+      "group_name": "Second Group",
+      "groupId": 2,
+      "userId": 2
     }
   ],
   "groupUsers": [],
