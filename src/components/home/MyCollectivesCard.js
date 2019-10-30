@@ -6,11 +6,14 @@ import GroupManager from '../../modules/GroupManager'
 class MyCollectivesCard extends Component {
 
   state = {
-    groups: []
-  }
+    groups: [],
+    group_name: "",
+    userId: ""
+}
+  currentUserId = parseInt(sessionStorage.getItem("userId"))
 
   handleDelete = (id) => {
-    GroupManager.delete(id)
+    GroupManager.delete("groups", id)
     .then(() => this.props.getData());
   }
 

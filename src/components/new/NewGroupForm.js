@@ -4,9 +4,10 @@ import GroupManager from '../../modules/GroupManager';
 class NewGroupForm extends Component {
     state = {
         group_name: "",
-        groupId: "",
-        loadingStatus: false,
+        userId: "",
+        loadingStatus: true,
     };
+    currentUserId = parseInt(sessionStorage.getItem("userId"))
 
     handleFieldChange = evt => {
         const stateToChange = {};
@@ -20,11 +21,12 @@ class NewGroupForm extends Component {
             window.alert("Please input a Collective Name");
         } else {
             this.setState({ loadingStatus: true });
-            const newGroup = {
-                name: this.state.group_name,
+        const newGroup = {
+                group_name: this.state.group_name,
+                userId: this.currentUserId
             };
-            GroupManager.post(newGroup)
-            .then(() => this.props.history.push("/new"));
+        GroupManager.post(newGroup)
+            .then((res) => this.props.history.push(`/newfriends/${res.id}`));
         }
     };
 
@@ -41,7 +43,6 @@ class NewGroupForm extends Component {
                     <div className="alignRight">
                         <button
                         type="button"
-                        // disabled={this.state.loadingStatus}
                         onClick={this.constructNewGroup}
                         >Submit</button>
                     </div>

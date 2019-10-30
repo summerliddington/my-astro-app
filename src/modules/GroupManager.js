@@ -8,6 +8,10 @@ get(id){
 getAll() {
     return fetch(`${remoteURL}/groups`).then(result => result.json())
   },
+getWithUserId(userId) {
+  return fetch(`${remoteURL}/groups?userId=${userId}`)
+      .then(result => result.json())
+},
   delete(id) {
     return fetch(`http://localhost:5002/groups/${id}`, {
         method: "DELETE"

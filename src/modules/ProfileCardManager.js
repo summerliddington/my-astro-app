@@ -7,7 +7,9 @@ export default {
    getSunsign(sunsign) {
     return fetch(`${remoteURL}/sunsigns/${sunsign}`).then(result => result.json())
    },
-
+  //  getSunsign(sunsign) {
+  //   return fetch(`${remoteURL}/sunsigns?sunsign=${sunsign}`).then(result => result.json())
+  //  },
 
 
 

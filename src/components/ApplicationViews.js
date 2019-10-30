@@ -4,6 +4,8 @@ import React, { Component } from 'react'
 import Login from './auth/Login'
 import Home from './home/Home'
 import NewGroupForm from './new/NewGroupForm'
+import ViewCollectiveList from './view/ViewCollectiveList'
+import NewWithFriends from './new/NewWithFriends'
 // import MyProfileList from '../components/home/MyProfileList'
 
 export default class ApplicationViews extends Component {
@@ -21,6 +23,12 @@ render() {
         }} />
         <Route path="/new" render={(props) => {
           return <NewGroupForm {...props} />
+        }}/>
+        <Route path="/newfriends/:groupId(\d+)" render={(props) => {
+          return <NewWithFriends {...props} />
+        }}/>
+        <Route path="/view" render={(props) => {
+          return <ViewCollectiveList {...props} />
         }}/>
 
 

@@ -18,7 +18,7 @@ class Home extends Component {
       <hr />
       <JoinedCollectivesList />
       <hr />
-      <MyCollectivesList />
+      <MyCollectivesList  />
       </>
     )
   }
