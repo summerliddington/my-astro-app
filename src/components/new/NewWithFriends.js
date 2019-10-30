@@ -32,7 +32,7 @@ class NewWithFriends extends Component {
   render() {
      console.log(this.state.group_name)
     return (
-      <div className="card">
+      <div className="new-group-card">
         <div className="card-content">
             <h3>Name: {this.state.group_name}</h3>
 

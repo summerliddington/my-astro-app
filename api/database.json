@@ -24,11 +24,6 @@
       "userId": 1
     },
     {
-      "id": 2,
-      "group_name": "Second Group",
-      "userId": 11
-    },
-    {
       "group_name": "this is a group",
       "userId": 1,
       "id": 3
@@ -39,7 +34,18 @@
       "id": 4
     }
   ],
-  "groupUsers": [],
+  "groupUsers": [
+    {
+      "id": 1,
+      "groupId": 1,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "groupId": 1,
+      "userId": 2
+    }
+  ],
   "sunsigns": [
     {
       "id": 1,
