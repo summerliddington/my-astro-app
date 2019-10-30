@@ -1,20 +1,28 @@
 {
   "users": [
     {
-      "user_name": "final test",
-      "password": "pass",
-      "birthday_month": "April",
-      "birthday_day": "3",
-      "sunsignId": 1,
-      "id": 15
-    },
-    {
       "user_name": "summerliddington",
       "password": "1111",
       "birthday_month": "May",
       "birthday_day": "19",
       "sunsignId": 2,
-      "id": 16
+      "id": 1
+    },
+    {
+      "user_name": "mo 1",
+      "password": "pass",
+      "birthday_month": "May",
+      "birthday_day": "1",
+      "sunsignId": 2,
+      "id": 8
+    },
+    {
+      "user_name": "upper case",
+      "password": "pass",
+      "birthday_month": "March",
+      "birthday_day": "9",
+      "sunsignId": 12,
+      "id": 10
     }
   ],
   "groups": [
@@ -23,20 +31,15 @@
       "group_name": "First Group",
       "groupId": 1,
       "userId": 1
-    }
-  ],
-  "groupUsers": [
-    {
-      "id": 1,
-      "groupId": 1,
-      "userId": 1
     },
     {
-      "id": 1,
-      "groupId": 1,
+      "id": 2,
+      "group_name": "Second Group",
+      "groupId": 2,
       "userId": 2
     }
   ],
+  "groupUsers": [],
   "sunsigns": [
     {
       "id": 1,

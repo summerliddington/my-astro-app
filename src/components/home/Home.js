@@ -2,32 +2,19 @@ import React, { Component } from 'react'
 import MyProfileList from "./MyProfileList";
 import JoinedCollectivesList from "./JoinedCollectivesList";
 import MyCollectivesList from "./MyCollectivesList"
-import APIManager from '../../modules/APIManager';
+// import APIManager from '../../modules/APIManager';
 
 class Home extends Component {
 
   state = {
-    users: []
-  }
-
-  getOrders = () => {
-    // APIManager.getAllOrders(this.props.userId)
-    // .then((results) => {
-    //   this.setState({
-    //     orders: results
-    //   })
-    // })
-  }
-
-  componentDidMount(){
-    this.getOrders();
+    loadingStatus: true
   }
 
   render(){
 
     return(
       <>
-      <MyProfileList  />
+      <MyProfileList setUser={this.props.setUser} currentUserId={this.props.currentUserId} {...this.props} />
       <hr />
       <JoinedCollectivesList />
       <hr />

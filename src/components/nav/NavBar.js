@@ -14,7 +14,7 @@ render(){
           <nav>
             <ul className="container">
               <li><Link className="nav-link" to="/">Home</Link></li>
-              <li><Link className="nav-link" onClick={this.handleLogout}>Logout</Link></li>
+              {/* <li><Link className="nav-link" onClick={this.handleLogout}>Logout</Link></li> */}
             </ul>
           </nav>
       </header>

@@ -5,11 +5,18 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 class Register extends Component {
 
+  state = {
+    user_name: "",
+    password: "",
+    birthday_month: "",
+    birthday_day: "",
+    sunsignId: ""
+  };
 
   handleAstroSign = () => {
     let sunsignId = ""
    return LoginManager.getAstroData().then(res => {
-      res.filter( sign => sign.start === "April" || sign.end === "April")
+      res.filter( sign => sign.start === this.state.birthday_month || sign.end === this.state.birthday_month)
       .forEach(month => {
         if(month.start === this.state.birthday_month && parseInt(this.state.birthday_day) >= month.startday ){
           sunsignId = month.id
@@ -22,13 +29,6 @@ class Register extends Component {
   }
 
   // Set initial state
-  state = {
-    user_name: "",
-    password: "",
-    birthday_month: "",
-    birthday_day: "",
-    sunsignId: ""
-  };
 
   handleFieldChange = (event) => {
     const stateToChange = {}

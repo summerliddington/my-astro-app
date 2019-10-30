@@ -1,23 +1,35 @@
 import React, { Component } from 'react';
+// import ProfileCardManager from "../../modules/ProfileCardManager"
 // import {Link} from 'react-router-dom'
+import ProfileCardManager from '../../modules/ProfileCardManager'
 
 
-class Home extends Component {
+class MyProfileCard extends Component {
+
+state = {
+  users: [],
+  sunsign: "",
+}
+componentDidMount= () => {
+  ProfileCardManager.getSunsign(this.props.user.sunsignId).then(res => this.setState({sunsign: res}))
+};
   render() {
+    console.log("this is the user", this.props.user.sunsign)
     return (
-      <div className="home">
-        <div className="profile-card">
-          <h2>Your Profile!</h2>
-          <h3>User Name: <span className="card-employeename">{this.props.user.user_name}</span></h3>
-
-          <p>Astrology Sign: {this.props.user.sunsignId}</p>
-          <p>Birthday: {this.props.user.birthday}</p>
-          <button type="button" onClick={() => this.props.deleteProfile(this.props.user.id)}>Profile</button>
-          <button type="button" onClick={() => {this.props.history.push(`/${this.props.user.id}/edit`)}}>Edit</button>
+      <div className="profile-card">
+        <div className="profile-content">
+          <h1>Your Profile!</h1>
+          <h2>User Name: {this.props.user.user_name}</h2>
+          <h2>Birthday Month: {this.props.user.birthday_month}</h2>
+          <h2>Birthday Month: {this.props.user.birthday_day}</h2>
+          { this.state.sunsign?
+          <h2>Astrology Sign: {this.state.sunsign.sunsign}</h2>
+        : ""}
+          {/* <button type="button" onClick={() => {this.props.history.push(`/${this.props.user.id}/edit`)}}>Edit</button> */}
         </div>
       </div>
     );
   }
 }
 
-export default Home;
+export default MyProfileCard;

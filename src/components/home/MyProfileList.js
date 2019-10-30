@@ -2,36 +2,49 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom'
 import MyProfileCard from './MyProfileCard'
 import ProfileCardManager from '../../modules/ProfileCardManager'
-// import Home from './Home'
+
+
 
 class MyProfileList extends Component {
-
     state = {
-        activeUser: parseInt(localStorage.getItem("credentials"))
+      currentUser:"",
+      user_name: "",
+      birthday_month: "",
+      birthday_day: "",
+      sunsignId: "",
+      loadingStatus: true
     }
+
     componentDidMount(){
-      // ProfileCardManager.getUser("users").then((getUser) => {
-      //     this.setState({
-      //         getUser: getUser
-      //     })
-      // })
+      console.log("currentUser", this.props.currentUserId)
+      ProfileCardManager.get(this.props.currentUserId)
+      .then((currentUser) => {
+        console.log(currentUser, "cu")
+          this.setState({
+            currentUser: currentUser
+          })
+      })
     }
 
-    handleDelete = (id) => {
-        ProfileCardManager.delete(id)
-        .then(() => this.props.getData());
-    }
 
-  render() {
-    return (
-      <>
-        <h1>Profile?</h1>
-            {/* {this.state.getUser.map(user => <MyProfileCard key={user.id} user={user}/>
-                )
-            } */}
-            </>
-    );
-  }
-    }
+render(){
+
+  return(
+    <>
+      <div className="profile-card">
+          <div className="profile-content">
+
+              <MyProfileCard
+                  key={this.state.currentUser.id}
+                  user={this.state.currentUser}
+                  {...this.props} />
+
+
+          </div>
+      </div>
+    </>
+  )
+}
+}
 
 export default MyProfileList;

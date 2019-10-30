@@ -3,6 +3,7 @@ import NavBar from "./nav/NavBar";
 import ApplicationViews from "./ApplicationViews";
 import Login from "../components/auth/Login"
 import Register from "../components/auth/Register"
+// import { withRouter } from "react-router"
 
 
 
@@ -14,20 +15,22 @@ class LandingPage extends Component {
 
     // Check if credentials are in local storage
     //returns true/false
-    isAuthenticated = () => localStorage.getItem("credentials") !== null
+    isAuthenticated = () => sessionStorage.getItem("userId") !== null
 
     setUser = (authObj) => {
 
-    localStorage.setItem(
-        "credentials",
-        JSON.stringify(authObj)
+    sessionStorage.setItem(
+        "userId",
+        JSON.stringify(authObj.id)
       )
       this.setState({
-        user: this.isAuthenticated()
+        user: this.isAuthenticated(),
+        currentUserId: parseInt(sessionStorage.getItem("userId"))
       });
     }
+
     clearUser = () => {
-      localStorage.clear()
+      sessionStorage.clear()
 
       this.setState({
           user: this.isAuthenticated()
@@ -36,8 +39,9 @@ class LandingPage extends Component {
   }
     componentDidMount(){
       this.setState({
-        user: this.isAuthenticated()
-      })
+        user: this.isAuthenticated(),
+        currentUserId: parseInt(sessionStorage.getItem("userId"))
+      });
     }
 
   render() {
@@ -47,11 +51,14 @@ class LandingPage extends Component {
       <>
         <NavBar user={this.state.user} clearUser={this.clearUser} />
         <ApplicationViews user={this.state.user}
-                          setUser={this.setUser} />
+                          setUser={this.setUser}
+                          currentUserId={this.state.currentUserId}
+                          // clearUser={this.clearUser}
+                          {...this.props} />
       </>
       :<><div className="logRegContainer">
       <Login setUser={this.setUser}/>
-    <Register setUser={this.setUser} />
+      <Register setUser={this.setUser} />
     </div>
     </>}
     </React.Fragment>

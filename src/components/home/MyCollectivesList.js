@@ -1,17 +1,17 @@
-import React, { Component } from 'react'
-    //import the components we will need
+    import React, { Component } from 'react'
     import MyCollectivesCard from './MyCollectivesCard'
-    import ProfileCardManager from '../../modules/ProfileCardManager'
+    import GroupManager from '../../modules/GroupManager'
+    import {withRouter} from 'react-router-dom'
 
     class MyCollectivesList extends Component {
-        //define what this component needs to render
+
         state = {
             groups: [],
         }
         deleteGroup = id => {
-            ProfileCardManager.delete(id)
+            GroupManager.delete(id)
             .then(() => {
-              ProfileCardManager.getAll()
+              GroupManager.getAll()
               .then((groups) => {
                 this.setState({
                     groups: groups
@@ -19,29 +19,42 @@ import React, { Component } from 'react'
               })
             })
           }
-    componentDidMount(){
-        console.log("MY COLLECTIVES LIST: ComponentDidMount");
 
-        // ProfileCardManager.getAll()
-        // .then((groups) => {
-        //     this.setState({
-        //         groups: groups
-        //     })
-        // })
+        getData = () => {
+            GroupManager.getAll()
+            .then((groups) => {
+                this.setState({
+                    groups: groups
+            })
+        })
     }
 
+    componentDidMount(){
+        this.getData()
+    }
     render(){
         console.log("MY COLLECTIVES LIST: Render");
 
         return(
+            <>
+            <h1>My Collective List</h1>
+            <section className="group-section">
+                <button type="button"
+                className="btn"
+                onClick={() => {this.props.history.push("/new")}}>New Collective</button>
+            </section>
             <div className="container-cards">
                 {this.state.groups.map(group =>
-                    <MyCollectivesCard key={group.id}
+                    <MyCollectivesCard
+                        key={group.id}
                         group={group}
+                        getData={this.getData}
+                        {...this.props}
                         deleteGroup={this.deleteGroup}/>)}
             </div>
+            </>
         )
     }
 }
 
-export default MyCollectivesList
+export default withRouter(MyCollectivesList)
