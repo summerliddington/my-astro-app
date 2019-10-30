@@ -7,11 +7,16 @@
 
         state = {
             groups: [],
+            group_name: "",
+            userId: ""
         }
+
+        currentUserId = parseInt(sessionStorage.getItem("userId"))
+
         deleteGroup = id => {
-            GroupManager.delete(id)
+            GroupManager.delete("groups", id)
             .then(() => {
-              GroupManager.getAll()
+              GroupManager.getAll("groups")
               .then((groups) => {
                 this.setState({
                     groups: groups
@@ -21,7 +26,7 @@
           }
 
         getData = () => {
-            GroupManager.getAll()
+            GroupManager.getWithUserId(this.currentUserId)
             .then((groups) => {
                 this.setState({
                     groups: groups
@@ -30,10 +35,15 @@
     }
 
     componentDidMount(){
-        this.getData()
+        GroupManager.getWithUserId(this.currentUserId)
+        .then((groups) => {
+            this.setState({
+                groups: groups
+            })
+        })
     }
+
     render(){
-        console.log("MY COLLECTIVES LIST: Render");
 
         return(
             <>
@@ -49,6 +59,7 @@
                         key={group.id}
                         group={group}
                         getData={this.getData}
+                        userId={group.userId}
                         {...this.props}
                         deleteGroup={this.deleteGroup}/>)}
             </div>

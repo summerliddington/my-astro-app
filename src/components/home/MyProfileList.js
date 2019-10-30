@@ -11,15 +11,13 @@ class MyProfileList extends Component {
       user_name: "",
       birthday_month: "",
       birthday_day: "",
-      sunsignId: "",
+      sunsign: "",
       loadingStatus: true
     }
 
     componentDidMount(){
-      console.log("currentUser", this.props.currentUserId)
       ProfileCardManager.get(this.props.currentUserId)
       .then((currentUser) => {
-        console.log(currentUser, "cu")
           this.setState({
             currentUser: currentUser
           })
@@ -28,7 +26,6 @@ class MyProfileList extends Component {
 
 
 render(){
-
   return(
     <>
       <div className="profile-card">

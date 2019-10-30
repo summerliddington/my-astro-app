@@ -20,7 +20,7 @@ import React, { Component } from 'react'
             })
           }
     componentDidMount(){
-        console.log("JOINED COLLECTIVES LIST: ComponentDidMount");
+
 
         // ProfileCardManager.getAll()
         // .then((groups) => {
@@ -31,7 +31,6 @@ import React, { Component } from 'react'
     }
 
     render(){
-        console.log("JOINED COLLECTIVES LIST: Render");
 
         return(
             <> 
