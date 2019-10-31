@@ -6,6 +6,7 @@ import Home from './home/Home'
 import NewGroupForm from './new/NewGroupForm'
 import ViewCollectiveList from './view/ViewCollectiveList'
 import NewWithFriends from './new/NewWithFriends'
+import FriendsList from './new/FriendsList'
 // import MyProfileList from '../components/home/MyProfileList'
 
 export default class ApplicationViews extends Component {
@@ -29,6 +30,9 @@ render() {
         }}/>
         <Route path="/view" render={(props) => {
           return <ViewCollectiveList {...props} />
+        }}/>
+        <Route path="newfriends" render={(props) => {
+          return <FriendsList {...props} />
         }}/>
 
 
