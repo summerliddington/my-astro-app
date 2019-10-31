@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import FriendsManager from '../../modules/FriendsManager';
 // import GroupManager from '../../modules/GroupManager'
 
-// import FriendsManager from '../../modules/FriendsManager';
-
 class FriendsCard extends Component {
 
     state = {

@@ -13,7 +13,7 @@ class MyCollectivesCard extends Component {
   currentUserId = parseInt(sessionStorage.getItem("userId"))
 
   handleDelete = (id) => {
-    GroupManager.delete("groups", id)
+    GroupManager.delete(id)
     .then(() => this.props.getData());
   }
 
@@ -25,8 +25,7 @@ class MyCollectivesCard extends Component {
 
           <h3>Name: <span className="group-name">{this.props.group.group_name}</span></h3>
           <Link to={`/view/${this.props.group.id}`}><button>View</button></Link>
-          <button type="button" onClick={() => this.props.deleteGroup(this.props.group.id)}>Delete Collective</button>
-          <button type="button" onClick={() => {this.props.history.push(`/groups/${this.props.group.id}/edit`)}}>Edit</button>
+          <button type="button" onClick={() => this.handleDelete(this.props.group.id)}>Delete Collective</button>
         </div>
       </div>
     );
