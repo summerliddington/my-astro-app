@@ -20,7 +20,7 @@ class NewWithFriends extends Component {
 }
 
 updateCurrentGroupUserState = () => {
-    FriendsManager.getGroupUsers(this.props.groupUsers.groupId)
+    FriendsManager.getGroupUsers(parseInt(this.props.match.params.groupId))
     .then((groupUsers) => {
         this.setState({
             groupUsers: groupUsers
@@ -30,7 +30,7 @@ updateCurrentGroupUserState = () => {
 }
 
   componentDidMount(){
-    GroupManager.get(this.props.match.params.groupId)
+    GroupManager.get(parseInt(this.props.match.params.groupId))
     .then((group) => {
         console.log(group)
       this.setState({
@@ -42,7 +42,7 @@ updateCurrentGroupUserState = () => {
   }
 
   render() {
-     console.log("GROUPID", this.state.groupId)
+     console.log("GROUPID", parseInt(this.props.match.params.groupId))
     return (
         <>
       <div className="new-group-card">
@@ -59,6 +59,7 @@ updateCurrentGroupUserState = () => {
       <div>
           <h3>Friends to Add To Group</h3>
           <FriendsList
+          updateCurrentGroupUserState={this.updateCurrentGroupUserState}
           key={this.state.groupId}
           groupId={this.state.groupId} />
       </div>

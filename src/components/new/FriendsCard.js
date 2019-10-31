@@ -24,6 +24,7 @@ class FriendsCard extends Component {
                 newGroupUser: results
             })
         })
+        .then(() => this.props.updateCurrentGroupUserState())
     }
   render() {
     return (

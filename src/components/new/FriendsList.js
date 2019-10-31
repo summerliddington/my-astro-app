@@ -29,6 +29,7 @@
             <div className="friends-cards">
                 {this.state.users.map(users =>
                     <FriendsCard
+                        updateCurrentGroupUserState={this.props.updateCurrentGroupUserState}
                         key={users.id}
                         users={users}
                         user_name={users.user_name}
