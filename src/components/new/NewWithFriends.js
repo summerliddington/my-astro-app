@@ -30,15 +30,16 @@ updateCurrentGroupUserState = () => {
 }
 
   componentDidMount(){
+      let newState = {}
     GroupManager.get(parseInt(this.props.match.params.groupId))
     .then((group) => {
-        console.log(group)
-      this.setState({
-        group_name: group.group_name,
-        groupId: group.id,
-        userId: group.userId,
-      });
-    });
+        newState.group_name = group.group_name
+        newState.groupId = group.id
+        newState.userId = group.userId
+    })
+    .then(() => FriendsManager.getGroupUsers(parseInt(this.props.match.params.groupId)))
+    .then((groupUsers) => newState.groupUsers = groupUsers)
+    .then(() => this.setState(newState))
   }
 
   render() {

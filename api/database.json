@@ -69,6 +69,16 @@
       "groupId": 7,
       "userId": 2,
       "id": 3
+    },
+    {
+      "groupId": 8,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "groupId": 8,
+      "userId": 2,
+      "id": 5
     }
   ],
   "sunsigns": [

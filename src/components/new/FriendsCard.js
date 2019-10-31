@@ -19,11 +19,6 @@ class FriendsCard extends Component {
             userId: this.props.users.id
         }
         FriendsManager.post(newGroupUser)
-        .then((results) => {
-            this.setState({
-                newGroupUser: results
-            })
-        })
         .then(() => this.props.updateCurrentGroupUserState())
     }
   render() {
