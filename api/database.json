@@ -32,6 +32,21 @@
       "group_name": "MO WINS",
       "userId": 1,
       "id": 4
+    },
+    {
+      "group_name": "NewGroup",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "group_name": "AGain",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "group_name": "name",
+      "userId": 1,
+      "id": 7
     }
   ],
   "groupUsers": [
@@ -44,6 +59,11 @@
       "id": 2,
       "groupId": 1,
       "userId": 2
+    },
+    {
+      "groupId": 7,
+      "userId": 2,
+      "id": 3
     }
   ],
   "sunsigns": [
