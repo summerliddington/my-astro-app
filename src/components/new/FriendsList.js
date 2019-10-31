@@ -17,13 +17,10 @@
             })
           }
     componentDidMount(){
-        console.log("FRIEND LIST: ComponentDidMount");
         this.getData()
     }
 
     render(){
-        console.log("Friend LIST: Render");
-
         return(
             <>
             <div className="friends-cards">

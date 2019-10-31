@@ -1,13 +1,31 @@
 import React, { Component } from 'react'
 import ViewCollectiveCard from './ViewCollectiveCard'
 import GroupManager from '../../modules/GroupManager'
+import FriendsManager from '../../modules/FriendsManager'
 
-class groupUsersList extends Component {
-        state = {
-        groups: "",
-        groupUsers: [],
-    }
+//CURRENT GROUP WITH COORDINATING GROUPUSERS, CAN DELETE GROUP USERS ONLY
 
+class ViewCollectiveList extends Component {
+    state = {
+        group_name: "",
+        groupId: "",
+        userId: "",
+        users: "",
+        groupUsers: []
+        }
+
+    currentUserId = parseInt(sessionStorage.getItem("userId"))
+
+    getData = () => {
+        FriendsManager.getGroupUsers(parseInt(this.props.match.params.groupId))
+        .then((groupUsers) => {
+            this.setState({
+                groupUsers: groupUsers,
+                groupId: groupUsers.groupId
+
+        })
+    })
+}
     deleteGroupUser = id => {
         GroupManager.delete(id)
         .then(() => {
@@ -20,27 +38,17 @@ class groupUsersList extends Component {
         })
     }
     componentDidMount(){
-        GroupManager.getAll()
-          .then((newGroupUsers) => {
-            this.setState({
-                groupUsers: newGroupUsers
-            })
-        })
+        this.getData()
     }
-
     render(){
         return(
             <>
-            <section className="section-content">
-                <button type="button"
-                    className="btn"
-                    onClick={() => {this.props.history.push("/groupUsers/new")}}>
-                    Admit groupUsers
-                </button>
-            </section>
+            <div className="view-collective-container">
+            <h3>Name: {this.state.group_name}</h3>
+            </div>
             <div className="view-collective-cards">
                 {this.state.groupUsers.map(groupUsers =>
-                    <ViewCollectiveCard 
+                    <ViewCollectiveCard
                             key={groupUsers.id}
                             groupUsers={groupUsers}
                             deletegroupUsers={this.deletegroupUsers}
@@ -51,4 +59,4 @@ class groupUsersList extends Component {
     }
 }
 
-export default groupUsersList
+export default ViewCollectiveList

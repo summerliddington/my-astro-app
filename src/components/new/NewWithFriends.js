@@ -43,7 +43,6 @@ updateCurrentGroupUserState = () => {
   }
 
   render() {
-     console.log("GROUPID", parseInt(this.props.match.params.groupId))
     return (
         <>
       <div className="new-group-card">
