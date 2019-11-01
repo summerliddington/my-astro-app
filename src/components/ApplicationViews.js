@@ -28,14 +28,12 @@ render() {
         <Route path="/newfriends/:groupId(\d+)" render={(props) => {
           return <NewWithFriends {...props} />
         }}/>
-        <Route path="/view" render={(props) => {
+        <Route path="/view/:groupId(\d+)" render={(props) => {
           return <ViewCollectiveList {...props} />
         }}/>
         <Route path="newfriends" render={(props) => {
           return <FriendsList {...props} />
         }}/>
-
-
 
         {/* <Route path="MyProfileList/:userId(\d+)" render={(props) => {
           return <MyProfileList userId={parseInt(props.match.params.userId)} {...props} />

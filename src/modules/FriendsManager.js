@@ -24,5 +24,9 @@ export default {
   },
   getGroupUsers(groupId) {
     return fetch(`${remoteURL}/groupUsers?groupId=${groupId}&_expand=user`).then(result => result.json())
+  },
+  deleteGroupUser(groupId) {
+    return fetch(`${remoteURL}/groupUsers?groupId=${groupId}&_expand=user`)
+    .then(result => result.json())
   }
 }

@@ -29,11 +29,6 @@
       "id": 3
     },
     {
-      "group_name": "name",
-      "userId": 1,
-      "id": 7
-    },
-    {
       "group_name": "mo's collective",
       "userId": 1,
       "id": 8
@@ -49,11 +44,6 @@
       "id": 2,
       "groupId": 1,
       "userId": 2
-    },
-    {
-      "groupId": 7,
-      "userId": 2,
-      "id": 3
     },
     {
       "groupId": 8,

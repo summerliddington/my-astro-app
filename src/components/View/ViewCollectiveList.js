@@ -14,44 +14,47 @@ class ViewCollectiveList extends Component {
         groupUsers: []
         }
 
-    currentUserId = parseInt(sessionStorage.getItem("userId"))
-
     getData = () => {
         FriendsManager.getGroupUsers(parseInt(this.props.match.params.groupId))
         .then((groupUsers) => {
             this.setState({
-                groupUsers: groupUsers,
-                groupId: groupUsers.groupId
-
+                groupUsers: groupUsers
         })
     })
 }
-    deleteGroupUser = id => {
-        GroupManager.delete(id)
-        .then(() => {
-          GroupManager.getAll()
-          .then((newGroupUsers) => {
+    // deleteGroupUser = id => {
+    //     GroupManager.delete(id)
+    //     .then(() => {
+    //       GroupManager.getAll()
+    //       .then((newGroupUsers) => {
+    //         this.setState({
+    //             groupUsers: newGroupUsers
+    //         })
+    //       })
+    //     })
+    // }
+    componentDidMount(){
+        FriendsManager.getGroupUsers(parseInt(this.props.match.params.groupId))
+        .then((groupUsers) => {
+            console.log(groupUsers)
             this.setState({
-                groupUsers: newGroupUsers
+                groupUsers: groupUsers
             })
-          })
         })
     }
-    componentDidMount(){
-        this.getData()
-    }
     render(){
+        console.log("Users", this.state.groupUsers.groupId)
         return(
             <>
             <div className="view-collective-container">
-            <h3>Name: {this.state.group_name}</h3>
+            <h3>Name: {this.state.groupUsers.group_name}</h3>
             </div>
             <div className="view-collective-cards">
                 {this.state.groupUsers.map(groupUsers =>
                     <ViewCollectiveCard
                             key={groupUsers.id}
                             groupUsers={groupUsers}
-                            deletegroupUsers={this.deletegroupUsers}
+                            getData={this.getData}
                             {...this.props} />)}
             </div>
             </>
