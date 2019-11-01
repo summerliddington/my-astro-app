@@ -9,12 +9,36 @@
       "id": 1
     },
     {
-      "user_name": "mo 1",
+      "user_name": "mo",
       "password": "pass",
-      "birthday_month": "May",
-      "birthday_day": "1",
+      "birthday_month": "April",
+      "birthday_day": "3",
       "sunsignId": 2,
       "id": 2
+    },
+    {
+      "user_name": "christopherking",
+      "password": "1111",
+      "birthday_month": "June",
+      "birthday_day": "1",
+      "sunsignId": 3,
+      "id": 3
+    },
+    {
+      "user_name": "leigh",
+      "password": "1111",
+      "birthday_month": "September",
+      "birthday_day": "17",
+      "sunsignId": 6,
+      "id": 4
+    },
+    {
+      "user_name": "sageklein",
+      "password": "1111",
+      "birthday_month": "April",
+      "birthday_day": "30",
+      "sunsignId": 2,
+      "id": 5
     }
   ],
   "groups": [
@@ -24,14 +48,14 @@
       "userId": 1
     },
     {
-      "group_name": "this is a group",
+      "group_name": "New Astro Collective",
       "userId": 1,
-      "id": 3
+      "id": 9
     },
     {
-      "group_name": "MO WINS",
-      "userId": 1,
-      "id": 4
+      "group_name": "Sage's Collective",
+      "userId": 5,
+      "id": 10
     }
   ],
   "groupUsers": [
@@ -44,6 +68,26 @@
       "id": 2,
       "groupId": 1,
       "userId": 2
+    },
+    {
+      "groupId": 9,
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "groupId": 10,
+      "userId": 4,
+      "id": 7
+    },
+    {
+      "groupId": 10,
+      "userId": 2,
+      "id": 8
+    },
+    {
+      "groupId": 10,
+      "userId": 1,
+      "id": 9
     }
   ],
   "sunsigns": [
