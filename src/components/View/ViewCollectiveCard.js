@@ -9,9 +9,6 @@ class ViewCollectiveCard extends Component {
   }
 
 
-
-
-  
   render() {
       console.log(this.props.groupUsers)
     return (
