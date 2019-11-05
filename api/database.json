@@ -49,20 +49,20 @@
       "id": 6
     },
     {
-      "user_name": "maddi",
-      "password": "2222",
-      "birthday_month": "september",
-      "birthday_day": "2",
-      "sunsignId": "",
-      "id": 7
-    },
-    {
       "user_name": "newuser",
       "password": "5555",
       "birthday_month": "January",
       "birthday_day": "5",
       "sunsignId": 10,
       "id": 8
+    },
+    {
+      "user_name": "Monica",
+      "password": "1111",
+      "birthday_month": "April",
+      "birthday_day": "3",
+      "sunsignId": 1,
+      "id": 9
     }
   ],
   "groups": [
@@ -90,6 +90,11 @@
       "group_name": "UX Collective",
       "userId": 1,
       "id": 13
+    },
+    {
+      "group_name": "testing 1",
+      "userId": 1,
+      "id": 14
     }
   ],
   "groupUsers": [
@@ -167,6 +172,26 @@
       "groupId": 13,
       "userId": 1,
       "id": 19
+    },
+    {
+      "groupId": 14,
+      "userId": 9,
+      "id": 20
+    },
+    {
+      "groupId": 14,
+      "userId": 8,
+      "id": 20
+    },
+    {
+      "groupId": 14,
+      "userId": 2,
+      "id": 31
+    },
+    {
+      "groupId": 14,
+      "userId": 6,
+      "id": 32
     }
   ],
   "sunsigns": [

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ViewCollectiveCard from './ViewCollectiveCard'
 import GroupManager from '../../modules/GroupManager'
 import FriendsManager from '../../modules/FriendsManager'
+import AddMoreFriendsList from './AddMoreFriendsList'
 import './ViewCollective.css'
 
 //CURRENT GROUP WITH COORDINATING GROUPUSERS, CAN DELETE GROUP USERS ONLY
@@ -14,7 +15,7 @@ class ViewCollectiveList extends Component {
         users: "",
         sunsign: "",
         groupUsers: []
-        }
+    }
 
     getData = () => {
         FriendsManager.getGroupUsers(parseInt(this.props.match.params.groupId))
@@ -24,47 +25,29 @@ class ViewCollectiveList extends Component {
                 group_name: groupUsers.group_name
         })
     })
-    .then(() => FriendsManager.getFriendSign
-            (this.state.sunsignId.sunsign))
-              .then(sunsignId => {
-                this.setState({
-              sunsignId: sunsignId,
-              sunsign: sunsignId.sunsign
-        })})
-}
-
-    // deleteGroupUser = id => {
-    //     GroupManager.delete(id)
-    //     .then(() => {
-    //       GroupManager.getAll()
-    //       .then((newGroupUsers) => {
-    //         this.setState({
-    //             groupUsers: newGroupUsers
-    //         })
-    //       })
-    //     })
-    // }
-    componentDidMount(){
+    }
+    updateCurrentGroupUserState = () => {
         FriendsManager.getGroupUsers(parseInt(this.props.match.params.groupId))
         .then((groupUsers) => {
             this.setState({
                 groupUsers: groupUsers
-        })})
-        .then(() => GroupManager.get(parseInt(this.props.match.params.groupId)))
-        .then((group) => {
-            this.setState({
-                group: group,
-                group_name: group.group_name
-        })})
-        .then(() => FriendsManager.getFriendSign
-            (this.props.match.params.sunsignId))
-              .then(sunsignId => {
-                this.setState({
-              sunsignId: sunsignId,
 
-        })})
-
+            })
+        })
     }
+    componentDidMount(){
+        let newState = {}
+      GroupManager.get(parseInt(this.props.match.params.groupId))
+      .then((group) => {
+          newState.group_name = group.group_name
+          newState.groupId = group.id
+          newState.userId = group.userId
+      })
+      .then(() => FriendsManager.getGroupUsers(parseInt(this.props.match.params.groupId)))
+      .then((groupUsers) => newState.groupUsers = groupUsers)
+      .then(() => this.setState(newState))
+    }
+
     render(){
         return(
             <>
@@ -78,6 +61,13 @@ class ViewCollectiveList extends Component {
                             groupUsers={groupUsers}
                             getData={this.getData}
                             {...this.props} />)}
+            <div className="friends-to-add-cards">
+            <h3>Friends to Add To Group</h3>
+                    <AddMoreFriendsList
+                     updateCurrentGroupUserState={this.updateCurrentGroupUserState}
+                    key={this.state.groupId}
+                    groupId={this.state.groupId} />
+            </div>
             </div>
             </>
         )

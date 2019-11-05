@@ -7,6 +7,7 @@ import NewGroupForm from './new/NewGroupForm'
 import ViewCollectiveList from './view/ViewCollectiveList'
 import NewWithFriends from './new/NewWithFriends'
 import FriendsList from './new/FriendsList'
+import AddMoreFriendsList from './view/AddMoreFriendsList'
 // import MyProfileList from '../components/home/MyProfileList'
 
 export default class ApplicationViews extends Component {
@@ -28,11 +29,14 @@ render() {
         <Route path="/newfriends/:groupId(\d+)" render={(props) => {
           return <NewWithFriends {...props} />
         }}/>
+        <Route path="newfriends" render={(props) => {
+          return <FriendsList {...props} />
+        }}/>
         <Route path="/view/:groupId(\d+)" render={(props) => {
           return <ViewCollectiveList {...props} />
         }}/>
-        <Route path="newfriends" render={(props) => {
-          return <FriendsList {...props} />
+        <Route path="/view" render={(props) => {
+          return <AddMoreFriendsList {...props} />
         }}/>
         {/* <Route path="/:userId(\d+)" render={(props) => {
         return <MyProfileList userId={parseInt(props.match.params.userId)} />
