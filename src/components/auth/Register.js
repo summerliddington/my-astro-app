@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import LoginManager from '../../modules/LoginManager'
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import './LoginRegister.css'
 
 
 class Register extends Component {
@@ -64,9 +65,8 @@ class Register extends Component {
           .then((createdUser) => {
             //This determines which page you land on upon registration
             this.props.setUser(createdUser)
-          }
 
-          )
+          })
       }
     }
     ))

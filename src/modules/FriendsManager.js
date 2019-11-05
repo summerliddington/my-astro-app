@@ -28,5 +28,8 @@ export default {
   deleteGroupUser(groupId) {
     return fetch(`${remoteURL}/groupUsers?groupId=${groupId}&_expand=user`)
     .then(result => result.json())
-  }
+  },
+  getFriendSign(sunsignId) {
+    return fetch(`${remoteURL}/users?sunsignId=${sunsignId}&_expand=sunsign`).then(result => result.json())
+  },
 }

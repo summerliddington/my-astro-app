@@ -53,7 +53,7 @@ class LandingPage extends Component {
         <ApplicationViews user={this.state.user}
                           setUser={this.setUser}
                           currentUserId={this.state.currentUserId}
-                          // clearUser={this.clearUser}
+                          clearUser={this.clearUser}
                           {...this.props} />
       </>
       :<><div className="logRegContainer">

@@ -16,7 +16,7 @@ isAuthenticated = () => sessionStorage.getItem("credentials") !== null
 render() {
   return (
     <React.Fragment>
-        <Route path="/login" render={props => {
+        <Route exact path="/login" render={props => {
               return <Login setUser={this.props.setUser} {...props} />
         }} />
         <Route exact path="/" render={props => {
@@ -34,17 +34,8 @@ render() {
         <Route path="newfriends" render={(props) => {
           return <FriendsList {...props} />
         }}/>
-
-        {/* <Route path="MyProfileList/:userId(\d+)" render={(props) => {
-          return <MyProfileList userId={parseInt(props.match.params.userId)} {...props} />
-        }} />
-         */}
-        {/* <Route exact path="/" render={(props) => {
-            return <Home user={this.props.user} {...props} />
-          }} />
-
-        <Route path="/:userId(\d+)" render={(props) => {
-          return <MyProfileList userId={parseInt(props.match.params.userId)} />
+        {/* <Route path="/:userId(\d+)" render={(props) => {
+        return <MyProfileList userId={parseInt(props.match.params.userId)} />
         }} /> */}
         </React.Fragment>
     );
