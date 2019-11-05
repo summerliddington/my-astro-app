@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import LoginManager from "../../modules/LoginManager";
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import './LoginRegister.css'
+import {withRouter} from 'react-router-dom'
 
 class Login extends Component {
 
@@ -35,7 +37,8 @@ class Login extends Component {
       } else {
           window.alert("User Name and Password do not match")
       }
-  })
+
+  }).then(() => this.props.history.push("/"))
 
 }
 
@@ -55,7 +58,7 @@ render() {
                   <Input onChange={this.handleFieldChange} type="password"
                       required="" type="password" name="password" id="password" placeholder="Don't Forget!" />
               </FormGroup>
-              <Button className="submit">Submit</Button>
+              <Button className="submit">Login</Button>
           </Form>
           </div>
           </>
@@ -63,4 +66,4 @@ render() {
       }
   }
 
-export default Login
+export default withRouter(Login)
