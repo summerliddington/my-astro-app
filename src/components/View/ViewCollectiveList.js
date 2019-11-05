@@ -17,6 +17,21 @@ class ViewCollectiveList extends Component {
         groupUsers: []
     }
 
+     handleDelete = id => {
+  //   FriendsManager.deleteGroupUser()
+  //   .then(() => this.props.getData());
+  // }
+
+    FriendsManager.deleteGroupUser(id)
+    .then(() => {
+      FriendsManager.getGroupUsers()
+      .then((newGroupUsers) => {
+        this.setState({
+            groupUsers: newGroupUsers
+        })
+      })
+    })
+}
     getData = () => {
         FriendsManager.getGroupUsers(parseInt(this.props.match.params.groupId))
         .then((groupUsers) => {

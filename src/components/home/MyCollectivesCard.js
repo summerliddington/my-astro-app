@@ -25,6 +25,7 @@ class MyCollectivesCard extends Component {
 
           <h3>Name: <span className="group-name">{this.props.group.group_name}</span></h3>
           <Link to={`/view/${this.props.group.id}`}><button>View</button></Link>
+
           <button type="button" onClick={() => this.handleDelete(this.props.group.id)}>Delete Collective</button>
         </div>
       </div>

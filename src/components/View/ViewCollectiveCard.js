@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FriendsManager from '../../modules/FriendsManager'
 import ProfileCardManager from '../../modules/ProfileCardManager'
-import GroupManager from '../../modules/GroupManager'
+// import GroupManager from '../../modules/GroupManager'
 
 
 class ViewCollectiveCard extends Component {
@@ -9,19 +9,19 @@ class ViewCollectiveCard extends Component {
   state = {
     users: [],
     sunsigns: [],
+    groupUser: [],
     horoscope: {},
     sunsign: {}
   }
 
   handleDelete = id => {
-  //   FriendsManager.deleteGroupUser(id)
+  //   FriendsManager.deleteGroupUser()
   //   .then(() => this.props.getData());
   // }
 
-  // deleteGroupUser = id => {
-    GroupManager.delete(id)
+    FriendsManager.deleteGroupUser(id)
     .then(() => {
-      GroupManager.getAll()
+      FriendsManager.getGroupUsers()
       .then((newGroupUsers) => {
         this.setState({
             groupUsers: newGroupUsers
@@ -60,7 +60,8 @@ class ViewCollectiveCard extends Component {
 
 
         <p>Horosocope: {this.state.horoscope.description} </p>
-          <button type="button" onClick={() => this.props.handleDelete(this.props.groupUser.id)}>Delete User</button>
+
+          <button type="button" onClick={() => this.handleDelete(this.props.groupUsers.id)}>Delete User</button>
         </div>
 
       </div>
