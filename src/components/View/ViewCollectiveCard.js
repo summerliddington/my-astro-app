@@ -13,22 +13,10 @@ class ViewCollectiveCard extends Component {
     horoscope: {},
     sunsign: {}
   }
-
-  handleDelete = id => {
-  //   FriendsManager.deleteGroupUser()
-  //   .then(() => this.props.getData());
-  // }
-
+  handleDelete = (id) => {
     FriendsManager.deleteGroupUser(id)
-    .then(() => {
-      FriendsManager.getGroupUsers()
-      .then((newGroupUsers) => {
-        this.setState({
-            groupUsers: newGroupUsers
-        })
-      })
-    })
-}
+    .then(() => this.props.getData());
+  }
 
   componentDidMount= () => {
      URL = (sunsign) => {return `https://aztro.sameerkumar.website/?sign=${sunsign}&day=today`;}

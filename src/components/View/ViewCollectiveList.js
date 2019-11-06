@@ -17,17 +17,13 @@ class ViewCollectiveList extends Component {
         groupUsers: []
     }
 
-     handleDelete = id => {
-  //   FriendsManager.deleteGroupUser()
-  //   .then(() => this.props.getData());
-  // }
-
+    deleteGroupUser = id => {
     FriendsManager.deleteGroupUser(id)
     .then(() => {
       FriendsManager.getGroupUsers()
       .then((newGroupUsers) => {
         this.setState({
-            groupUsers: newGroupUsers
+            newgroupUsers: newGroupUsers
         })
       })
     })
@@ -75,7 +71,8 @@ class ViewCollectiveList extends Component {
                             key={groupUsers.id}
                             groupUsers={groupUsers}
                             getData={this.getData}
-                            {...this.props} />)}
+                            {...this.props}
+                            deleteGroupUser={this.deleteGroupUser} />)}
             <div className="friends-to-add-cards">
             <h3>Friends to Add To Group</h3>
                     <AddMoreFriendsList

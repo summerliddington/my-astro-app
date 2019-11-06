@@ -179,9 +179,13 @@
       "id": 32
     },
     {
+      "userId": 8,
+      "id": 35
+    },
+    {
       "groupId": 14,
-      "userId": 3,
-      "id": 33
+      "userId": 1,
+      "id": 36
     }
   ],
   "sunsigns": [
