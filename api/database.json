@@ -1,12 +1,12 @@
 {
   "users": [
     {
+      "id": 1,
       "user_name": "summerliddington",
       "password": "1111",
       "birthday_month": "May",
       "birthday_day": "19",
-      "sunsignId": 2,
-      "id": 1
+      "sunsignId": 2
     },
     {
       "user_name": "mo",
@@ -63,6 +63,46 @@
       "birthday_day": "3",
       "sunsignId": 1,
       "id": 9
+    },
+    {
+      "user_name": "blank",
+      "password": "2222",
+      "birthday_month": "March",
+      "birthday_day": "2",
+      "sunsignId": 12,
+      "id": 12
+    },
+    {
+      "id": 13,
+      "user_name": "news",
+      "password": "8888",
+      "birthday_month": "April",
+      "birthday_day": "3",
+      "sunsignId": 1
+    },
+    {
+      "id": 14,
+      "user_name": "Brenda",
+      "password": "3131",
+      "birthday_month": "December",
+      "birthday_day": "31",
+      "sunsignId": 10
+    },
+    {
+      "user_name": "random",
+      "password": "pass",
+      "birthday_month": "April",
+      "birthday_day": "21",
+      "sunsignId": 2,
+      "id": 15
+    },
+    {
+      "user_name": "random 2",
+      "password": "pass",
+      "birthday_month": "April",
+      "birthday_day": "31",
+      "sunsignId": 2,
+      "id": 16
     }
   ],
   "groups": [
@@ -90,6 +130,11 @@
       "group_name": "UX Collective",
       "userId": 1,
       "id": 13
+    },
+    {
+      "group_name": "UX/UI",
+      "userId": 14,
+      "id": 14
     }
   ],
   "groupUsers": [
@@ -169,8 +214,19 @@
       "id": 19
     },
     {
-      "userId": 8,
-      "id": 35
+      "groupId": 14,
+      "userId": 1,
+      "id": 20
+    },
+    {
+      "groupId": 14,
+      "userId": 4,
+      "id": 21
+    },
+    {
+      "groupId": 14,
+      "userId": 5,
+      "id": 22
     }
   ],
   "sunsigns": [

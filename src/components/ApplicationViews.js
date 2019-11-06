@@ -24,6 +24,9 @@ render() {
         <Route exact path="/" render={props => {
           return <Home setUser={this.props.setUser} currentUserId={this.props.currentUserId} {...props} />
         }} />
+        {/* <Route exact path="/:userId(\d+)" render={(props) => {
+        return <Home userId={parseInt(props.match.params.userId)} {...props}/>
+        }} /> */}
         <Route path="/:userId(\d+)/edit" render={props => {
           return <MyProfileEdit {...props} />
         }}/>
