@@ -135,6 +135,26 @@
       "group_name": "UX/UI",
       "userId": 14,
       "id": 14
+    },
+    {
+      "group_name": "newness",
+      "userId": 1,
+      "id": 15
+    },
+    {
+      "group_name": "newname",
+      "userId": 1,
+      "id": 16
+    },
+    {
+      "group_name": "another",
+      "userId": 1,
+      "id": 17
+    },
+    {
+      "group_name": "again",
+      "userId": 1,
+      "id": 18
     }
   ],
   "groupUsers": [
@@ -227,6 +247,66 @@
       "groupId": 14,
       "userId": 5,
       "id": 22
+    },
+    {
+      "groupId": 15,
+      "userId": 3,
+      "id": 24
+    },
+    {
+      "groupId": 15,
+      "userId": 4,
+      "id": 25
+    },
+    {
+      "groupId": 15,
+      "userId": 2,
+      "id": 26
+    },
+    {
+      "groupId": 16,
+      "userId": 4,
+      "id": 27
+    },
+    {
+      "groupId": 16,
+      "userId": 5,
+      "id": 28
+    },
+    {
+      "groupId": 17,
+      "userId": 5,
+      "id": 29
+    },
+    {
+      "groupId": 17,
+      "userId": 4,
+      "id": 30
+    },
+    {
+      "groupId": 17,
+      "userId": 3,
+      "id": 31
+    },
+    {
+      "groupId": 17,
+      "userId": 2,
+      "id": 32
+    },
+    {
+      "groupId": 18,
+      "userId": 8,
+      "id": 33
+    },
+    {
+      "groupId": 18,
+      "userId": 6,
+      "id": 34
+    },
+    {
+      "groupId": 18,
+      "userId": 5,
+      "id": 35
     }
   ],
   "sunsigns": [
