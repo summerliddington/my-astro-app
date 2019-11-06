@@ -10,9 +10,15 @@ export default {
    getAll() {
     return fetch(`${remoteURL}/sunsigns`).then(result => result.json())
    },
-
-
-
+   update(editedUser) {
+    return fetch(`${remoteURL}/users/${editedUser.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedUser)
+    }).then(data => data.json());
+  },
 
   delete(id) {
     return fetch(`http://localhost:5002/users/${id}`, {

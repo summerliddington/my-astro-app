@@ -90,11 +90,6 @@
       "group_name": "UX Collective",
       "userId": 1,
       "id": 13
-    },
-    {
-      "group_name": "testing 1",
-      "userId": 1,
-      "id": 14
     }
   ],
   "groupUsers": [
@@ -174,18 +169,8 @@
       "id": 19
     },
     {
-      "groupId": 14,
-      "userId": 6,
-      "id": 32
-    },
-    {
       "userId": 8,
       "id": 35
-    },
-    {
-      "groupId": 14,
-      "userId": 1,
-      "id": 36
     }
   ],
   "sunsigns": [

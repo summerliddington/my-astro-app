@@ -29,8 +29,6 @@ class Register extends Component {
     }).then(() => this.setState({sunsignId: sunsignId}))
   }
 
-  // Set initial state
-
   handleFieldChange = (event) => {
     const stateToChange = {}
     stateToChange[event.target.id] = event.target.value
