@@ -25,9 +25,11 @@ export default {
   getGroupUsers(groupId) {
     return fetch(`${remoteURL}/groupUsers?groupId=${groupId}&_expand=user`).then(result => result.json())
   },
-  deleteGroupUser(groupId) {
-    return fetch(`${remoteURL}/groupUsers?groupId=${groupId}&_expand=user`)
-    .then(result => result.json())
+  deleteGroupUser(id) {
+    return fetch(`http://localhost:5002/groupUsers/${id}`, {
+      method: "DELETE"
+  })
+  .then(result => result.json())
   },
   getFriendSign(sunsignId) {
     return fetch(`${remoteURL}/users?sunsignId=${sunsignId}&_expand=sunsign`).then(result => result.json())

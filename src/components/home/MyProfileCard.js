@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import ProfileCardManager from "../../modules/ProfileCardManager"
 // import {Link} from 'react-router-dom'
 import ProfileCardManager from '../../modules/ProfileCardManager'
 
@@ -25,7 +24,8 @@ componentDidMount= () => {
           { this.state.sunsign?
           <h2>Astrology Sign: {this.state.sunsign}</h2>
         : ""}
-          {/* <button type="button" onClick={() => {this.props.history.push(`/${this.props.user.id}/edit`)}}>Edit</button> */}
+          <button type="button" onClick={() => {this.props.history.push(`/${this.props.user.id}/edit`)}}>Edit</button>
+
         </div>
       </div>
     );
