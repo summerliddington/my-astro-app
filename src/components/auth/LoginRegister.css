@@ -1,3 +1,84 @@
 .logRegForm {
-    background: #FDDFDF;
+    background: #c98c6d;
+    width: 500px;
+    height: 700px;
+}
+.logRegContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #fefaee;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+#title {
+    font-family: 'Amarante', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: #e6be67;
+    margin-right: 20px;
+    margin-top: 90px;
+}
+#rightForm{
+    align-self: auto;
+    margin-right: 20px;
+}
+#leftForm {
+    align-self: auto;
+}
+.eachFormGroup {
+    background: #c98c6d;
+    width: 500px;
+    height: 75px;
+    text-align: center;
+}
+
+.logRegTitle {
+    font-family: 'Amarante', cursive;
+    font-size: 50px;
+    text-align: center;
+    padding: 40px 10px;
+    color: #e6be67;
+
+}
+
+.subText {
+    font-family: 'Montez', cursive;
+    font-size: 30px;
+    color: #e6be67
+
+}
+.submit {
+    font-family: 'Montez', cursive;
+    color: #fefaee;
+    font-size: 25px;
+    background-color: #9FB498 !important;
+    margin-left: 100px;
+    border-color: #9FB498 !important;
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+#user_name {
+    background-color: transparent !important;
+    border: none;
+    border-bottom: 1px solid #e6be67;
+}
+#birthday_month {
+    background-color: transparent !important;
+    border: none;
+    border-bottom: 1px solid #e6be67;
+}
+#birthday_day {
+    background-color: transparent !important;
+    border: none;
+    border-bottom: 1px solid #e6be67;
+}
+#password {
+    background-color: transparent !important;
+    border: none;
+    border-bottom: 1px solid #e6be67;
 }

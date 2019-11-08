@@ -45,21 +45,23 @@ class Login extends Component {
 render() {
   return (
       <>
+      <div className="pageContainer">
       <div className="logRegForm">
-          <h3 className="logRegTitle">Login</h3>
+          <h3 className="logRegTitle" id="leftForm">Login</h3>
       <Form onSubmit={this.handleLogin} inline>
-              <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                  <Label htmlFor="inputUserName" className="mr-sm-2">User Name:</Label>
+              <FormGroup className="eachFormGroup">
+                  <Label htmlFor="inputUserName" className="subText">User Name:  </Label>
                   <Input onChange={this.handleFieldChange}
                       required="" autoFocus="" type="user_name" name="user_name" id="user_name" placeholder="Your Cool Astro Name" />
               </FormGroup>
-              <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                  <Label htmlFor="inputPassword" className="mr-sm-2">Password:</Label>
+              <FormGroup className="eachFormGroup">
+                  <Label htmlFor="inputPassword" className="subText">Password:   </Label>
                   <Input onChange={this.handleFieldChange} type="password"
                       required="" type="password" name="password" id="password" placeholder="Don't Forget!" />
               </FormGroup>
               <Button className="submit">Login</Button>
           </Form>
+          </div>
           </div>
           </>
           );
