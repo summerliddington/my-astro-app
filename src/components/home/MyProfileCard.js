@@ -15,9 +15,9 @@ componentDidMount= () => {
 };
   render() {
     return (
-      <div className="profile-card">
-        <div className="profile-content">
-          <h1>Your Profile!</h1>
+      <div className="myProfileCard">
+        <div className="myProfileCardContent">
+          <h1>Your Astro Profile!</h1>
           <h2>User Name: {this.props.user.user_name}</h2>
           <h2>Birthday Month: {this.props.user.birthday_month}</h2>
           <h2>Birthday Month: {this.props.user.birthday_day}</h2>
