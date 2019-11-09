@@ -11,8 +11,9 @@ render(){
 
     return (
       <header>
-          <nav>
-            <ul className="container">
+          <nav className="navContainer">
+            <div className="navTitle">Astro Collective</div>
+            <ul className="navLinks">
               <li><Link className="nav-link" to="/">Home</Link></li>
               <li><Link className="nav-link" onClick={this.handleLogout}>Logout</Link></li>
             </ul>

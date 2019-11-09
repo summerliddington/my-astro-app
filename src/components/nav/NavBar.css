@@ -1,45 +1,40 @@
-small {
-    font-size: 75%;
-  }
 
   header {
-    background-color: #9FB498;
-    border: #C6BD6E solid 3px;
-    margin-bottom: 1em;
+    border: #e6be67 solid 3px;
+    background-color: #c98c6d;
   }
 
-  .site-title {
-    color: ghostwhite;
-    text-align: center;
-  }
-
-  nav .container {
+  .navContainer {
     display: flex;
-    padding: 0;
-    margin-bottom: 0;
+    flex-direction: row;
+    justify-content: space-between;
   }
-
-  nav .container li {
-    flex: 1;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.5em;
-    color: cornsilk;
-    box-sizing: border-box;
-    background-color: #FDDFDF;
+  .navTitle {
+    font-family: 'Amarante', cursive;
+    font-size: 50px;
+    color: #e6be67;
+    padding-left: 20px;
+  }
+  .navLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     list-style-type: none;
+    padding-right: 20px;
+  }
+  .nav-link {
+    color: #e6be67;
+    font-size: 30px;
+    font-family: 'Montez', cursive;
+    text-decoration: none;
+    padding: 15px;
   }
 
-  nav .container a {
-    color: cornsilk;
-  }
-
-  nav .container a:hover {
+  nav .navContainer a:hover {
     color: maroon;
   }
   nav span {
     cursor: pointer;
-    text-decoration: underline;
  }
  nav span:hover {
   color: maroon;
