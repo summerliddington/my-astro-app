@@ -19,7 +19,6 @@ class Home extends Component {
       setUser={this.props.setUser}
       currentUserId={this.props.currentUserId}
       {...this.props} />
-      <hr />
       <MyCollectivesList  />
       </div>
       </>

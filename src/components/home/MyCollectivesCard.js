@@ -23,10 +23,11 @@ class MyCollectivesCard extends Component {
       <div className="myCollectivesCard">
         <div className="myCollectivesCardContent">
 
-          <h3>Name: <span className="group-name">{this.props.group.group_name}</span></h3>
-          <Link to={`/view/${this.props.group.id}`}><button>View</button></Link>
+          <h3><span>{this.props.group.group_name}</span></h3>
+          <Link to={`/view/${this.props.group.id}`}><button className="viewButton">View</button></Link>
 
-          <button type="button" onClick={() => this.handleDelete(this.props.group.id)}>Delete Collective</button>
+          <button className="deleteButton"
+          type="button" onClick={() => this.handleDelete(this.props.group.id)}>Delete Collective</button>
         </div>
       </div>
     );
