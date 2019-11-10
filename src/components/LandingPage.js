@@ -3,6 +3,8 @@ import NavBar from "./nav/NavBar";
 import ApplicationViews from "./ApplicationViews";
 import Login from "../components/auth/Login"
 import Register from "../components/auth/Register"
+import './LandingPage.css'
+import '../components/LandingPage.css'
 // import { withRouter } from "react-router"
 
 
@@ -46,9 +48,12 @@ class LandingPage extends Component {
 
   render() {
     return (
+      <div className=".landingBackground">
       <React.Fragment>
+
       {(this.state.user) ?
       <>
+
         <NavBar user={this.state.user} clearUser={this.clearUser} />
         <ApplicationViews user={this.state.user}
                           setUser={this.setUser}
@@ -57,11 +62,15 @@ class LandingPage extends Component {
                           {...this.props} />
       </>
       :<><div className="logRegContainer">
+        <h3 id="title">Astro Collective</h3>
       <Login setUser={this.setUser}/>
       <Register setUser={this.setUser} />
     </div>
+
     </>}
+
     </React.Fragment>
+    </div>
     );
   }
 }

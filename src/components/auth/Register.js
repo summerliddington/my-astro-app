@@ -74,32 +74,33 @@ class Register extends Component {
   render() {
     return (
       <>
-        <div className="logRegForm">
+      <div className="pageContainer">
+        <div className="logRegForm" id="rightForm">
           <h3 className="logRegTitle">Register</h3>
           <Form onSubmit={this.handleRegister} inline>
-            <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-              <Label htmlFor="user_name" className="mr-sm-2">Name:</Label>
+            <FormGroup className="eachFormGroup">
+              <Label htmlFor="user_name" className="subText">Name:  </Label>
               <Input onChange={this.handleFieldChange} type="user_name"
                 id="user_name"
                 placeholder="User Name"
                 required="" autoFocus="" />
             </FormGroup>
-            <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-              <Label htmlFor="birthday_month" className="mr-sm-2">Birthday Month:</Label>
+            <FormGroup className="eachFormGroup">
+              <Label htmlFor="birthday_month" className="subText">Birthday Month:   </Label>
               <Input onChange={this.handleFieldChange} type="birthday_month"
                 id="birthday_month"
                 placeholder="month ex: April"
                 required="" autoFocus="" />
             </FormGroup>
-            <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-              <Label htmlFor="birthday_day" className="mr-sm-2">Birthday Day:</Label>
+            <FormGroup className="eachFormGroup">
+              <Label htmlFor="birthday_day" className="subText">Birthday Day:   </Label>
               <Input onChange={this.handleFieldChange} type="birthday_day"
                 id="birthday_day"
                 placeholder="day ex: 18"
                 required="" autoFocus="" />
             </FormGroup>
-            <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-              <Label htmlFor="inputPassword" className="mr-sm-2">Password:</Label>
+            <FormGroup className="eachFormGroup">
+              <Label htmlFor="inputPassword" className="subText">Password:   </Label>
               <Input onChange={this.handleFieldChange} type="password"
                 id="password"
                 placeholder="Password"
@@ -107,6 +108,7 @@ class Register extends Component {
             </FormGroup>
             <Button className="submit">Submit</Button>
           </Form>
+        </div>
         </div>
       </>
     )

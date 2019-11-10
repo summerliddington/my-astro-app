@@ -1,0 +1,131 @@
+
+#homeBackground {
+    background: #fefaee;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* LEFT SIDE */
+
+.myProfileCardContent {
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 3em;
+    background-color: #95aabb;
+}
+.myProfileCardContent h1 {
+    font-family: 'Amarante', cursive;
+    font-size: 3em;
+    color: #e6be67;
+    margin: 1em;
+}
+.myProfileCardContent h2 {
+    color: #e6be67;
+    font-size: 2.5em;
+    font-family: 'Montez', cursive;
+}
+.editButton {
+    font-family: 'Montez', cursive;
+    color: #fefaee;
+    font-size: 2em;
+    background-color: #9FB498 !important;
+    margin: 1em;
+    border-color: #9FB498 !important;
+    width: 10em;
+}
+
+/* RIGHT SIDE */
+
+.myCollectivesList {
+    background: #fefaee;
+}
+.myCollectivesCard {
+    background: #fefaee;
+}
+.myCollectivesList {
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 3em;
+    background-color: #fefaee;
+}
+.myCollectivesList h1 {
+    font-family: 'Amarante', cursive;
+    font-size: 3em;
+    color: #e6be67;
+    margin: 1em;
+
+}
+/* .myCollectivesList{
+    width: 45vw;
+    height: 70vh;
+    overflow-y: scroll;
+} */
+.myCollectivesCard {
+    height: 20vh;
+    width: 40vw;
+    margin: .5em;
+}
+.newButton {
+    font-family: 'Montez', cursive;
+    color: #fefaee;
+    font-size: 2em;
+    background-color: #9FB498 !important;
+    margin: 1em;
+    border-color: #9FB498 !important;
+    width: 10em;
+}
+.newButton:hover {
+    color: red;
+}
+.myCollectivesListContent {
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+    width: 45vw;
+    height: 70vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.myCollectivesCardContent h3 {
+    color: #e6be67;
+    font-size: 3em;
+    font-family: 'Montez', cursive;
+    margin: .25em;
+}
+.myCollectivesCardContent {
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+    margin: 1em;
+    background-color: #95aabb;
+}
+.deleteButton {
+    font-family: 'Montez', cursive;
+    color: #fefaee;
+    font-size: 1.5em;
+    background-color: #9FB498 !important;
+    border-color: #9FB498 !important;
+    width: 10em;
+    margin: .5em;
+}
+.viewButton {
+    font-family: 'Montez', cursive;
+    color: #fefaee;
+    font-size: 1.5em;
+    background-color: #9FB498 !important;
+    border-color: #9FB498 !important;
+    width: 2em;
+    margin: .5em;
+
+}

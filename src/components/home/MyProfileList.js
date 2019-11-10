@@ -28,8 +28,8 @@ class MyProfileList extends Component {
 render(){
   return(
     <>
-      <div className="profile-card">
-          <div className="profile-content">
+      <div className="myProfileList">
+          <div className="myProfileListContent">
 
               <MyProfileCard
                   key={this.state.currentUser.id}

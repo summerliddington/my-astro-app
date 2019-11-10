@@ -47,13 +47,14 @@
 
         return(
             <>
+
+            <section className="myCollectivesList">
             <h1>My Collective List</h1>
-            <section className="group-section">
                 <button type="button"
-                className="btn"
+                className="newButton"
                 onClick={() => {this.props.history.push("/new")}}>New Collective</button>
-            </section>
-            <div className="container-cards">
+
+            <div className="myCollectivesListContent">
                 {this.state.groups.map(group =>
                     <MyCollectivesCard
                         key={group.id}
@@ -63,6 +64,7 @@
                         {...this.props}
                         deleteGroup={this.deleteGroup}/>)}
             </div>
+            </section>
             </>
         )
     }

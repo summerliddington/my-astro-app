@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import GroupManager from '../../modules/GroupManager';
 import FriendsList from '../new/FriendsList';
 import FriendsManager from '../../modules/FriendsManager';
+import { Link } from 'react-router-dom'
 
 
 class NewWithFriends extends Component {
@@ -14,10 +15,9 @@ class NewWithFriends extends Component {
     groupUsers: []
     }
 
-  handleDelete = () => {
-    GroupManager.delete(this.props.userId)
-    .then(() => this.props.history.push("/"))
-}
+//   handleView = () => {
+//     this.props.history.push("/view")
+// }
 
 updateCurrentGroupUserState = () => {
     FriendsManager.getGroupUsers(parseInt(this.props.match.params.groupId))
@@ -48,7 +48,8 @@ updateCurrentGroupUserState = () => {
       <div className="new-group-card">
         <div className="card-content">
             <h3>Name: {this.state.group_name}</h3>
-            <button type="button" onClick={this.handleDelete}>Delete</button>
+
+            <Link to={`/view/${this.props.match.params.groupId}`}><button>View</button></Link>
         </div>
             <h3>List of Friends in Group</h3>
             {this.state.groupUsers.length > 0

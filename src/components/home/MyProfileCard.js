@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import {Link} from 'react-router-dom'
 import ProfileCardManager from '../../modules/ProfileCardManager'
+import './home.css'
 
 
 class MyProfileCard extends Component {
@@ -15,16 +16,15 @@ componentDidMount= () => {
 };
   render() {
     return (
-      <div className="profile-card">
-        <div className="profile-content">
-          <h1>Your Profile!</h1>
-          <h2>User Name: {this.props.user.user_name}</h2>
-          <h2>Birthday Month: {this.props.user.birthday_month}</h2>
-          <h2>Birthday Month: {this.props.user.birthday_day}</h2>
+      <div className="myProfileCard">
+        <div className="myProfileCardContent">
+          <h1>Your Astro Profile!</h1>
+          <h2><span>{this.props.user.user_name}</span></h2>
+          <h2>{this.props.user.birthday_month}      {this.props.user.birthday_day}</h2>
           { this.state.sunsign?
           <h2>Astrology Sign: {this.state.sunsign}</h2>
         : ""}
-          <button type="button" onClick={() => {this.props.history.push(`/${this.props.user.id}/edit`)}}>Edit</button>
+          <button className="editButton" type="button" onClick={() => {this.props.history.push(`/${this.props.user.id}/edit`)}}>Edit</button>
 
         </div>
       </div>
