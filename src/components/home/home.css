@@ -37,6 +37,7 @@
     margin: 1em;
     border-color: #9FB498 !important;
     width: 10em;
+    border-radius: 2px;
 }
 
 /* RIGHT SIDE */
@@ -82,6 +83,7 @@
     margin: 1em;
     border-color: #9FB498 !important;
     width: 10em;
+    border-radius: 2px;
 }
 .newButton:hover {
     color: red;
@@ -93,6 +95,7 @@
     width: 45vw;
     height: 70vh;
     overflow-y: scroll;
+    /* overflow: hidden; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,6 +121,7 @@
     border-color: #9FB498 !important;
     width: 10em;
     margin: .5em;
+    border-radius: 2px;
 }
 .viewButton {
     font-family: 'Montez', cursive;
@@ -127,5 +131,6 @@
     border-color: #9FB498 !important;
     width: 2em;
     margin: .5em;
+    border-radius: 2px;
 
 }

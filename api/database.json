@@ -91,6 +91,11 @@
       "group_name": "UX Cohort Collective",
       "userId": 1,
       "id": 2
+    },
+    {
+      "group_name": "test",
+      "userId": 1,
+      "id": 3
     }
   ],
   "groupUsers": [
@@ -138,6 +143,11 @@
       "groupId": 2,
       "userId": 18,
       "id": 9
+    },
+    {
+      "groupId": 3,
+      "userId": 4,
+      "id": 10
     }
   ],
   "sunsigns": [
