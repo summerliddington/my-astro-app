@@ -42,9 +42,9 @@ class ViewCollectiveCard extends Component {
     return (
       <div className="card">
         <div className="card-content">
-        <h3>Friend Name: <span className="friend-name">{this.props.groupUsers.user.user_name}</span></h3>
+        <h2><span className="friend-name">{this.props.groupUsers.user.user_name}</span></h2>
 
-        <h2>Astrology Sign: {this.state.sunsigns.filter(sunsigns => sunsigns.id === this.props.groupUsers.user.sunsignId).map(sunsigns => <p>{sunsigns.sunsign}</p>)} </h2>
+        <h2 className="friend-name">{this.state.sunsigns.filter(sunsigns => sunsigns.id === this.props.groupUsers.user.sunsignId).map(sunsigns => <p>{sunsigns.sunsign}</p>)} </h2>
 
 
         <p>Horosocope: {this.state.horoscope.description} </p>

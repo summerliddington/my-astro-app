@@ -1,15 +1,31 @@
+.view-collective-container {
+  background:  #fefaee;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+}
+
+.view-collective-container h3 {
+  font-family: 'Amarante', cursive;
+    font-size: 2.5em;
+    color: #e6be67;
+    margin: 1em;
+}
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
-    background: aliceblue;
+    background: #95aabb;
     margin-bottom: 2em;
     flex: 0 1 24%;
+    width: 20em;
+    height: 30em;
   }
 
   .card-content {
     padding: .5em;
+
   }
 
   .card-content h3 {
@@ -24,8 +40,10 @@
     color: darkslategrey;
   }
 
-  .content-petname {
-    color: darkslategrey;
+  .friend-name {
+    font-family: 'Montez', cursive;
+    color: #e6be67;;
+    font-size: 2em;
   }
 
   .card button {
@@ -44,4 +62,19 @@
 
   .card button:hover {
     background-color: #9FB498;
+  }
+
+  /*Friends to Add Section*/
+  .friends-to-add-cards {
+    background:  #fefaee;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+  }
+
+  .friends-to-add-cards h3 {
+    font-family: 'Amarante', cursive;
+    font-size: 2.5em;
+    color: #e6be67;
+    margin: 1em;
   }

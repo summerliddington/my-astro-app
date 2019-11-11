@@ -21,11 +21,11 @@ class FriendsCard extends Component {
     }
   render() {
     return (
-      <div className="friend-card">
-        <div className="friend-card-content">
+      <div className="friendsCardContainer">
+        <div className="friendsCardContent">
 
-        <h3>Friend Name: <span className="friend-name">{this.props.users.user_name}</span></h3>
-          <button type="button" onClick={this.onAddClick}>Add To Collective</button>
+        <h2><span>{this.props.users.user_name}</span></h2>
+          <button className="addBtn" type="button" onClick={this.onAddClick}>Add To Collective</button>
         </div>
       </div>
     );

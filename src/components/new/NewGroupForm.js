@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import GroupManager from '../../modules/GroupManager';
+import './new.css'
+
 
 class NewGroupForm extends Component {
     state = {
@@ -34,20 +36,21 @@ class NewGroupForm extends Component {
 
         return(
             <>
-            <form>
-                <fieldset>
-                    <div className="formgrid">
+            <div className="backgroundContainer">
+            <form className="formDiv">
+                    <div className="inputDiv">
+                        <label className="group_name" htmlFor="group_name">Name: </label>
                         <input type="text" required onChange={this.handleFieldChange} id="group_name" placeholder="Collective Name"/>
-                        <label htmlFor="group_name">Name</label>
+
                     </div>
-                    <div className="alignRight">
+                    <div>
                         <button
-                        type="button"
+                        type="button" className="submit"
                         onClick={this.constructNewGroup}
                         >Submit</button>
                     </div>
-                </fieldset>
             </form>
+            </div>
         </>
         )
     }

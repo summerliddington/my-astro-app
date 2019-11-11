@@ -23,7 +23,7 @@
     render(){
         return(
             <>
-            <div className="friends-cards">
+            <div className="friendsListContainer">
                 {this.state.users.map(users =>
                     <FriendsCard
                         updateCurrentGroupUserState={this.props.updateCurrentGroupUserState}

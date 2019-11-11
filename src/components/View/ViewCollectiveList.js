@@ -63,23 +63,23 @@ class ViewCollectiveList extends Component {
         return(
             <>
             <div className="view-collective-container">
-            <h3>Name: {this.state.group_name} </h3>
-            </div>
-            <div className="view-collective-cards">
-                {this.state.groupUsers.map(groupUsers =>
-                    <ViewCollectiveCard
-                            key={groupUsers.id}
-                            groupUsers={groupUsers}
-                            getData={this.getData}
-                            {...this.props}
-                            deleteGroupUser={this.deleteGroupUser} />)}
-            <div className="friends-to-add-cards">
-            <h3>Friends to Add To Group</h3>
-                    <AddMoreFriendsList
-                     updateCurrentGroupUserState={this.updateCurrentGroupUserState}
-                    key={this.state.groupId}
-                    groupId={this.state.groupId} />
-            </div>
+                <h3>{this.state.group_name} </h3>
+                <div className="view-collective-cards">
+                    {this.state.groupUsers.map(groupUsers =>
+                        <ViewCollectiveCard
+                                key={groupUsers.id}
+                                groupUsers={groupUsers}
+                                getData={this.getData}
+                                {...this.props}
+                                deleteGroupUser={this.deleteGroupUser} />)}
+                <div className="friends-to-add-cards">
+                <h3>Friends to Add To Group</h3>
+                        <AddMoreFriendsList
+                        updateCurrentGroupUserState={this.updateCurrentGroupUserState}
+                        key={this.state.groupId}
+                        groupId={this.state.groupId} />
+                        </div>
+                </div>
             </div>
             </>
         )

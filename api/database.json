@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "user_name": "summerliddington",
+      "user_name": "Summer Liddington",
       "password": "1111",
       "birthday_month": "May",
       "birthday_day": "19",
@@ -147,14 +147,9 @@
       "id": 16
     },
     {
-      "group_name": "another",
+      "group_name": "name",
       "userId": 1,
       "id": 17
-    },
-    {
-      "group_name": "again",
-      "userId": 1,
-      "id": 18
     }
   ],
   "groupUsers": [
@@ -269,41 +264,6 @@
       "id": 28
     },
     {
-      "groupId": 17,
-      "userId": 5,
-      "id": 29
-    },
-    {
-      "groupId": 17,
-      "userId": 4,
-      "id": 30
-    },
-    {
-      "groupId": 17,
-      "userId": 3,
-      "id": 31
-    },
-    {
-      "groupId": 17,
-      "userId": 2,
-      "id": 32
-    },
-    {
-      "groupId": 18,
-      "userId": 8,
-      "id": 33
-    },
-    {
-      "groupId": 18,
-      "userId": 6,
-      "id": 34
-    },
-    {
-      "groupId": 18,
-      "userId": 5,
-      "id": 35
-    },
-    {
       "groupId": 13,
       "userId": 3,
       "id": 36
@@ -312,6 +272,21 @@
       "groupId": 1,
       "userId": 1,
       "id": 37
+    },
+    {
+      "groupId": 17,
+      "userId": 1,
+      "id": 38
+    },
+    {
+      "groupId": 17,
+      "userId": 2,
+      "id": 39
+    },
+    {
+      "groupId": 17,
+      "userId": 3,
+      "id": 40
     }
   ],
   "sunsigns": [

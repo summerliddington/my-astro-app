@@ -1,0 +1,78 @@
+/*NewGroupForm*/
+
+
+.backgroundContainer {
+    background:  #fefaee;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+}
+.formDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.inputDiv {
+    margin-left: 5em;
+}
+.group_name {
+    font-family: 'Montez', cursive;
+    font-size: 3em;
+    color: #e6be67
+}
+#group_name {
+    background-color: transparent !important;
+    border: none;
+    border-bottom: .2em solid #e6be67;
+}
+
+/*NewWithFriends*/
+
+.newWithFriendsContainer {
+    background:  #fefaee;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.newWithFriendsContainer h3 {
+    font-family: 'Amarante', cursive;
+    font-size: 2.5em;
+    color: #e6be67;
+    margin: 1em;
+}
+.newWithFriendsContainer h2 {
+    font-family: 'Montez', cursive;
+    color: #e6be67;;
+    font-size: 2em;
+}
+.viewBtn {
+    font-family: 'Montez', cursive;
+    color: #fefaee;
+    font-size: 2em;
+    background-color: #9FB498 !important;
+    margin: 1em;
+    border-color: #9FB498 !important;
+    width: 10em;
+}
+
+/*FRIENDS SECTION*/
+
+.friendsList {
+    background:  #fefaee;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+}
+.addBtn {
+    font-family: 'Montez', cursive;
+    color: #fefaee;
+    font-size: 1.25em;
+    background-color: #9FB498 !important;
+    margin: 1em;
+    border-color: #9FB498 !important;
+    width: 10em;
+}

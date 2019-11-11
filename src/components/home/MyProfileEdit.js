@@ -73,46 +73,49 @@ class MyProfileEdit extends Component {
         <>
         <form>
           <fieldset>
-            <div className="formgrid">
-              <input type="text" required className="form-control"
+            <div className="pageContainer">
+            <label className="subText" htmlFor="user_name">User Name:  </label>
+              <input type="text" required className="subText"
                 onChange={this.handleFieldChange}
                 id="user_name"
                 value={this.state.user_name}
               />
-              <label htmlFor="user_name">User Name</label>
 
-              <input type="text" required className="form-control"
+              <label className="subText" htmlFor="password">Password:  </label>
+              <input type="text" required className="subText"
                 onChange={this.handleFieldChange}
                 id="password"
                 value={this.state.password}
               />
-              <label htmlFor="user_name">Password</label>
+
+              <label className="subText" htmlFor="birthday_month">Birthday Month:   </label>
               <input
                 type="text"
                 required
-                className="form-control"
+                className="subText"
                 onChange={this.handleFieldChange}
                 id="birthday_month"
                 value={this.state.birthday_month}
               />
-              <label htmlFor="birthday_month">Birthday Month</label>
+
+              <label className="subText" htmlFor="birthday_day">Birthday Day:   </label>
               <input
                 type="text"
                 required
-                className="form-control"
+                className="subText"
                 onChange={this.handleFieldChange}
                 id="birthday_day"
                 value={this.state.birthday_day}
               />
-              <label htmlFor="birthday_day">Birthday Day</label>
+
 
 
             </div>
-            <div className="alignRight">
+            <div className="btnDiv">
               <button
                 type="button" disabled={this.state.loadingStatus}
                 onClick={this.updateExistingUser}
-                className="btn btn-primary"
+                className="submit"
               >Submit</button>
             </div>
           </fieldset>
