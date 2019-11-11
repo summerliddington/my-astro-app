@@ -1,10 +1,15 @@
 .view-collective-container {
-  background:  #fefaee;
+    background:  #fefaee;
     width: 100%;
     height: 100%;
     padding: 2em;
-}
 
+}
+.landingBackground {
+  background:  #fefaee;
+  width: 100%;
+  height: 100%;
+}
 .view-collective-container h3 {
   font-family: 'Amarante', cursive;
     font-size: 2.5em;
@@ -54,13 +59,14 @@
   }
 
   .card button {
-    background-color: #FDDFDF;
+    background-color: #fefaee;
     border: none;
-    color: cornsilk;
+    color: #c98c6d;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-family: 'Montez', cursive;
+    font-size: 1.5em;
     padding: .5em;
     border-radius: 2px;
     margin: .1em;

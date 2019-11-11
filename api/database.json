@@ -9,23 +9,7 @@
       "sunsignId": 2
     },
     {
-      "user_name": "mo",
-      "password": "pass",
-      "birthday_month": "April",
-      "birthday_day": "3",
-      "sunsignId": 2,
-      "id": 2
-    },
-    {
-      "user_name": "christopherking",
-      "password": "1111",
-      "birthday_month": "June",
-      "birthday_day": "1",
-      "sunsignId": 3,
-      "id": 3
-    },
-    {
-      "user_name": "leigh",
+      "user_name": "Leigh",
       "password": "1111",
       "birthday_month": "September",
       "birthday_day": "17",
@@ -33,7 +17,7 @@
       "id": 4
     },
     {
-      "user_name": "sageklein",
+      "user_name": "Sage",
       "password": "1111",
       "birthday_month": "April",
       "birthday_day": "30",
@@ -41,7 +25,7 @@
       "id": 5
     },
     {
-      "user_name": "heidi",
+      "user_name": "Heidi",
       "password": "7777",
       "birthday_month": "March",
       "birthday_day": "7",
@@ -49,36 +33,12 @@
       "id": 6
     },
     {
-      "user_name": "newuser",
-      "password": "5555",
-      "birthday_month": "January",
-      "birthday_day": "5",
-      "sunsignId": 10,
-      "id": 8
-    },
-    {
-      "user_name": "Monica",
+      "user_name": "Mo",
       "password": "1111",
       "birthday_month": "April",
       "birthday_day": "3",
       "sunsignId": 1,
       "id": 9
-    },
-    {
-      "user_name": "blank",
-      "password": "2222",
-      "birthday_month": "March",
-      "birthday_day": "2",
-      "sunsignId": 12,
-      "id": 12
-    },
-    {
-      "id": 13,
-      "user_name": "news",
-      "password": "8888",
-      "birthday_month": "April",
-      "birthday_day": "3",
-      "sunsignId": 1
     },
     {
       "id": 14,
@@ -89,20 +49,36 @@
       "sunsignId": 10
     },
     {
-      "user_name": "random",
-      "password": "pass",
-      "birthday_month": "April",
-      "birthday_day": "21",
-      "sunsignId": 2,
+      "user_name": "Quin",
+      "password": "9999",
+      "birthday_month": "November",
+      "birthday_day": "9",
+      "sunsignId": 8,
       "id": 15
     },
     {
-      "user_name": "random 2",
-      "password": "pass",
-      "birthday_month": "April",
-      "birthday_day": "31",
-      "sunsignId": 2,
+      "user_name": "Keaton",
+      "password": "19",
+      "birthday_month": "October",
+      "birthday_day": "19",
+      "sunsignId": 7,
       "id": 16
+    },
+    {
+      "user_name": "Gradi",
+      "password": "19",
+      "birthday_month": "June",
+      "birthday_day": "19",
+      "sunsignId": 3,
+      "id": 17
+    },
+    {
+      "user_name": "Chandler",
+      "password": "27",
+      "birthday_month": "May",
+      "birthday_day": "27",
+      "sunsignId": 3,
+      "id": 18
     }
   ],
   "groups": [
@@ -112,44 +88,9 @@
       "userId": 1
     },
     {
-      "group_name": "Sage's Collective",
-      "userId": 5,
-      "id": 10
-    },
-    {
-      "group_name": "Class Collective",
-      "userId": 6,
-      "id": 11
-    },
-    {
-      "group_name": "UX collective",
-      "userId": 6,
-      "id": 12
-    },
-    {
-      "group_name": "UX Collective",
+      "group_name": "UX Cohort Collective",
       "userId": 1,
-      "id": 13
-    },
-    {
-      "group_name": "UX/UI",
-      "userId": 14,
-      "id": 14
-    },
-    {
-      "group_name": "newness",
-      "userId": 1,
-      "id": 15
-    },
-    {
-      "group_name": "newname",
-      "userId": 1,
-      "id": 16
-    },
-    {
-      "group_name": "name",
-      "userId": 1,
-      "id": 17
+      "id": 2
     }
   ],
   "groupUsers": [
@@ -159,144 +100,44 @@
       "userId": 1
     },
     {
-      "id": 2,
-      "groupId": 1,
-      "userId": 2
+      "groupId": 2,
+      "userId": 1,
+      "id": 2
     },
     {
-      "groupId": 10,
+      "groupId": 2,
       "userId": 4,
+      "id": 3
+    },
+    {
+      "groupId": 2,
+      "userId": 5,
+      "id": 4
+    },
+    {
+      "groupId": 2,
+      "userId": 15,
+      "id": 5
+    },
+    {
+      "groupId": 2,
+      "userId": 15,
+      "id": 6
+    },
+    {
+      "groupId": 2,
+      "userId": 16,
       "id": 7
     },
     {
-      "groupId": 10,
-      "userId": 2,
+      "groupId": 2,
+      "userId": 17,
       "id": 8
     },
     {
-      "groupId": 10,
-      "userId": 1,
+      "groupId": 2,
+      "userId": 18,
       "id": 9
-    },
-    {
-      "groupId": 11,
-      "userId": 2,
-      "id": 10
-    },
-    {
-      "groupId": 11,
-      "userId": 4,
-      "id": 11
-    },
-    {
-      "groupId": 11,
-      "userId": 5,
-      "id": 12
-    },
-    {
-      "groupId": 11,
-      "userId": 1,
-      "id": 13
-    },
-    {
-      "groupId": 12,
-      "userId": 1,
-      "id": 14
-    },
-    {
-      "groupId": 12,
-      "userId": 4,
-      "id": 15
-    },
-    {
-      "groupId": 12,
-      "userId": 5,
-      "id": 16
-    },
-    {
-      "groupId": 13,
-      "userId": 4,
-      "id": 17
-    },
-    {
-      "groupId": 13,
-      "userId": 1,
-      "id": 19
-    },
-    {
-      "groupId": 14,
-      "userId": 1,
-      "id": 20
-    },
-    {
-      "groupId": 14,
-      "userId": 4,
-      "id": 21
-    },
-    {
-      "groupId": 14,
-      "userId": 5,
-      "id": 22
-    },
-    {
-      "groupId": 15,
-      "userId": 3,
-      "id": 24
-    },
-    {
-      "groupId": 15,
-      "userId": 4,
-      "id": 25
-    },
-    {
-      "groupId": 16,
-      "userId": 4,
-      "id": 27
-    },
-    {
-      "groupId": 16,
-      "userId": 5,
-      "id": 28
-    },
-    {
-      "groupId": 13,
-      "userId": 3,
-      "id": 36
-    },
-    {
-      "groupId": 1,
-      "userId": 1,
-      "id": 37
-    },
-    {
-      "groupId": 17,
-      "userId": 1,
-      "id": 38
-    },
-    {
-      "groupId": 17,
-      "userId": 2,
-      "id": 39
-    },
-    {
-      "groupId": 17,
-      "userId": 3,
-      "id": 40
-    },
-    {
-      "groupId": 17,
-      "userId": 4,
-      "id": 41
-    },
-    {
-      "groupId": 17,
-      "userId": 8,
-      "id": 42
-    },
-    {
-      "groupId": 17,
-      "userId": 9,
-      "id": 44
     }
   ],
   "sunsigns": [

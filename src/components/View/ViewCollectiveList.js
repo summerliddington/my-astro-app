@@ -4,6 +4,7 @@ import GroupManager from '../../modules/GroupManager'
 import FriendsManager from '../../modules/FriendsManager'
 import AddMoreFriendsList from './AddMoreFriendsList'
 import './ViewCollective.css'
+import '../LandingPage.css'
 
 //CURRENT GROUP WITH COORDINATING GROUPUSERS, CAN DELETE GROUP USERS ONLY
 
