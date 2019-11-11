@@ -11,6 +11,12 @@
     color: #e6be67;
     margin: 1em;
 }
+.view-collective-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -36,8 +42,9 @@
   }
 
   .card-content p {
-    font-size: 80%;
+    font-size: 1em;
     color: darkslategrey;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .friend-name {

@@ -249,11 +249,6 @@
       "id": 25
     },
     {
-      "groupId": 15,
-      "userId": 2,
-      "id": 26
-    },
-    {
       "groupId": 16,
       "userId": 4,
       "id": 27
@@ -287,6 +282,21 @@
       "groupId": 17,
       "userId": 3,
       "id": 40
+    },
+    {
+      "groupId": 17,
+      "userId": 4,
+      "id": 41
+    },
+    {
+      "groupId": 17,
+      "userId": 8,
+      "id": 42
+    },
+    {
+      "groupId": 17,
+      "userId": 9,
+      "id": 44
     }
   ],
   "sunsigns": [

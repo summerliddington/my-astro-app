@@ -44,7 +44,7 @@ class ViewCollectiveCard extends Component {
         <div className="card-content">
         <h2><span className="friend-name">{this.props.groupUsers.user.user_name}</span></h2>
 
-        <h2 className="friend-name">{this.state.sunsigns.filter(sunsigns => sunsigns.id === this.props.groupUsers.user.sunsignId).map(sunsigns => <p>{sunsigns.sunsign}</p>)} </h2>
+        <h2 className="friend-name">{this.state.sunsigns.filter(sunsigns => sunsigns.id === this.props.groupUsers.user.sunsignId).map(sunsigns => <h2>{sunsigns.sunsign}</h2>)} </h2>
 
 
         <p>Horosocope: {this.state.horoscope.description} </p>

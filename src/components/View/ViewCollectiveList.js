@@ -72,13 +72,13 @@ class ViewCollectiveList extends Component {
                                 getData={this.getData}
                                 {...this.props}
                                 deleteGroupUser={this.deleteGroupUser} />)}
+                </div>
                 <div className="friends-to-add-cards">
                 <h3>Friends to Add To Group</h3>
                         <AddMoreFriendsList
                         updateCurrentGroupUserState={this.updateCurrentGroupUserState}
                         key={this.state.groupId}
                         groupId={this.state.groupId} />
-                        </div>
                 </div>
             </div>
             </>
