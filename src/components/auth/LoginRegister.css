@@ -61,6 +61,7 @@
     width: 300px;
     margin-top: 20px;
     margin-bottom: 15px;
+    border-radius: 2px;
 }
 #user_name {
     background-color: transparent !important;

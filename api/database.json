@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "user_name": "Summer Liddington",
+      "user_name": "Summer",
       "password": "1111",
       "birthday_month": "May",
       "birthday_day": "19",
@@ -79,6 +79,22 @@
       "birthday_day": "27",
       "sunsignId": 3,
       "id": 18
+    },
+    {
+      "user_name": "Tay Tay",
+      "password": "22",
+      "birthday_month": "November",
+      "birthday_day": "2",
+      "sunsignId": 8,
+      "id": 19
+    },
+    {
+      "user_name": "Katie",
+      "password": "26",
+      "birthday_month": "August",
+      "birthday_day": "26",
+      "sunsignId": 6,
+      "id": 20
     }
   ],
   "groups": [
@@ -93,7 +109,7 @@
       "id": 2
     },
     {
-      "group_name": "test",
+      "group_name": "Friends",
       "userId": 1,
       "id": 3
     }
@@ -122,11 +138,6 @@
     {
       "groupId": 2,
       "userId": 15,
-      "id": 5
-    },
-    {
-      "groupId": 2,
-      "userId": 15,
       "id": 6
     },
     {
@@ -145,9 +156,14 @@
       "id": 9
     },
     {
-      "groupId": 3,
-      "userId": 4,
+      "groupId": 2,
+      "userId": 19,
       "id": 10
+    },
+    {
+      "groupId": 3,
+      "userId": 20,
+      "id": 11
     }
   ],
   "sunsigns": [
