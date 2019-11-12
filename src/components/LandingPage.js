@@ -62,7 +62,11 @@ class LandingPage extends Component {
                           {...this.props} />
       </>
       :<><div className="logRegContainer">
-        <h3 id="title">Astro Collective</h3>
+          <div className="titleImage">
+          <h3 id="title">Astro Collective</h3>
+          <div id="image"><img src={require('../components/auth/shape1_03.gif')} /></div>
+          </div>
+
       <Login setUser={this.setUser}/>
       <Register setUser={this.setUser} />
     </div>
