@@ -36,23 +36,52 @@ class ViewCollectiveCard extends Component {
             .then(json => { this.setState({horoscope: json}); }))
 
   }
-
+  cardDisplay = () => {
+    if (this.state.sunsign.id === 1) {
+        return (<img id="cardIcon" src={require('./aries_01.gif')} alt="Aries" />
+        )
+    } else if (this.state.sunsign.id === 2) {
+        return (<img id="cardIcon" src={require('./taurus.02.gif')} alt="Taurus" />)
+    } else if (this.state.sunsign.id === 3) {
+        return (<img id="cardIcon" src={require('./gemini_03.gif')} alt="Gemini" />)
+    } else if (this.state.sunsign.id === 4) {
+        return (<img id="cardIcon" src={require('./cancer_04.gif')} alt="Cancer" />)
+    } else if (this.state.sunsign.id === 5) {
+      return (<img id="cardIcon" src={require('./leo_05.gif')} alt="Cancer" />)
+    } else if (this.state.sunsign.id === 6) {
+      return (<img id="cardIcon" src={require('./virgo_06.gif')} alt="Cancer" />)
+    } else if (this.state.sunsign.id === 7) {
+      return (<img id="cardIcon" src={require('./libra_07.gif')} alt="Cancer" />)
+    } else if (this.state.sunsign.id === 8) {
+      return (<img id="cardIcon" src={require('./scorpio_08.gif')} alt="Cancer" />)
+    } else if (this.state.sunsign.id === 9) {
+      return (<img id="cardIcon" src={require('./sagittarius_09.gif')} alt="Cancer" />)
+    } else if (this.state.sunsign.id === 10) {
+      return (<img id="cardIcon" src={require('./capricorn_10.gif')} alt="Cancer" />)
+    } else if (this.state.sunsign.id === 11) {
+      return (<img id="cardIcon" src={require('./aquarius_11.gif')} alt="Cancer" />)
+    } else if (this.state.sunsign.id === 12) {
+      return (<img id="cardIcon" src={require('./pisces_12.gif')} alt="Cancer" />)
+    }
+}
 
   render() {
+
     return (
       <div className="card">
         <div className="card-content">
-        <h3>Friend Name: <span className="friend-name">{this.props.groupUsers.user.user_name}</span></h3>
+          <h2 className="friend-name">{this.props.groupUsers.user.user_name}</h2>
 
-        <h2>Astrology Sign: {this.state.sunsigns.filter(sunsigns => sunsigns.id === this.props.groupUsers.user.sunsignId).map(sunsigns => <p>{sunsigns.sunsign}</p>)} </h2>
+          <h2 className="friend-sign">{this.state.sunsigns.filter(sunsigns => sunsigns.id === this.props.groupUsers.user.sunsignId).map(sunsigns => <h2>{sunsigns.sunsign}</h2>)} </h2>
+          <div className="imageContainer">
+                            {this.cardDisplay()}
+                    </div>
 
+          <p><strong>Horosocope:   </strong> {this.state.horoscope.description} </p>
 
-        <p>Horosocope: {this.state.horoscope.description} </p>
-
-          <button type="button" onClick={() => this.handleDelete(this.props.groupUsers.id)}>Delete User</button>
+          <button type="button" onClick={() => this.handleDelete(this.props.groupUsers.id)}>Delete Friend</button>
         </div>
-
-      </div>
+       </div>
     );
   }
 }

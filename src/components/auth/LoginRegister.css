@@ -24,17 +24,16 @@
 }
 #rightForm{
     align-self: auto;
-    margin-right: 20px;
 }
 #leftForm {
     align-self: auto;
 }
 .eachFormGroup {
-    background: white;
-    width: 500px;
-    height: 75px;
+    background: #c98c6d;
+    width: 20em;
+    height: 5em;
     text-align: left;
-    margin-left: 40px;
+    margin-left: 5em;
 }
 
 .logRegTitle {
@@ -62,11 +61,12 @@
     width: 300px;
     margin-top: 20px;
     margin-bottom: 15px;
+    border-radius: 2px;
 }
 #user_name {
     background-color: transparent !important;
     border: none;
-    border-bottom: 1px solid #e6be67;
+    border-bottom: .25em solid #e6be67;
 }
 #birthday_month {
     background-color: transparent !important;

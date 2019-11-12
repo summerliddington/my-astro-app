@@ -45,24 +45,26 @@ updateCurrentGroupUserState = () => {
   render() {
     return (
         <>
-      <div className="new-group-card">
-        <div className="card-content">
-            <h3>Name: {this.state.group_name}</h3>
+      <div className="newWithFriendsContainer">
+        <div className="friendsNameAndView">
+            <h3>{this.state.group_name}</h3>
 
-            <Link to={`/view/${this.props.match.params.groupId}`}><button>View</button></Link>
-        </div>
-            <h3>List of Friends in Group</h3>
+            <Link to={`/view/${this.props.match.params.groupId}`}><button className="viewBtn">View</button></Link>
+
+            <h3>List of Friends in Collective</h3>
             {this.state.groupUsers.length > 0
-                ? <>{this.state.groupUsers.map((user) => <p>{user.user.user_name}</p>)}</>
+                ? <>{this.state.groupUsers.map((user) => <h2>{user.user.user_name}</h2>)}</>
                 : ""}
-      </div>
+        </div>
+
       <hr/>
-      <div>
-          <h3>Friends to Add To Group</h3>
-          <FriendsList
-          updateCurrentGroupUserState={this.updateCurrentGroupUserState}
-          key={this.state.groupId}
-          groupId={this.state.groupId} />
+        <div>
+            <h3>Friends to Add To Collective</h3>
+            <FriendsList
+            updateCurrentGroupUserState={this.updateCurrentGroupUserState}
+            key={this.state.groupId}
+            groupId={this.state.groupId} />
+        </div>
       </div>
       </>
     );

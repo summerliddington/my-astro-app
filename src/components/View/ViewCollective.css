@@ -1,47 +1,126 @@
+.view-collective-container {
+    background:  #fefaee;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+
+}
+.landingBackground {
+  background:  #fefaee;
+  width: 100%;
+  height: 100%;
+}
+.view-collective-container h3 {
+  font-family: 'Amarante', cursive;
+    font-size: 2.5em;
+    color: #e6be67;
+    margin: 2em;
+    border: none;
+    border-bottom: .15em solid #e6be67;
+
+}
+.view-collective-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
+    border: .3em solid #e6be67;
     border-radius: 5px; /* 5px rounded corners */
-    background: aliceblue;
-    margin-bottom: 2em;
+    background: #95aabb;
+    margin-bottom: 1em;
     flex: 0 1 24%;
+    width: 20em;
+    height: 40em;
+    padding: .5em;
   }
 
   .card-content {
-    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
 
-  .card-content h3 {
-    margin-top: 0;
-    margin-bottom: .5em;
-    font-weight: bold;
-    color: #9FB498;
+  .friend-name {
+    font-family: 'Montez', cursive;
+    color: darkslategrey;
+    font-size: 2em;
+    padding: 0em;
+    margin: 1em 0 0 0;
   }
-
+  .friend-sign {
+    color: darkslategrey;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0em;
+    padding: 0em;
+  }
+  .imageContainer {
+    margin: 0em;
+  }
   .card-content p {
-    font-size: 80%;
+    font-size: 1em;
     color: darkslategrey;
+    font-family: 'Montserrat', sans-serif;
+    margin: 1em;
   }
 
-  .content-petname {
-    color: darkslategrey;
-  }
-
-  .card button {
-    background-color: #FDDFDF;
+  .card-content button {
+    background-color: #fefaee;
     border: none;
-    color: cornsilk;
+    color: #c98c6d;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
-    padding: .5em;
+    font-family: 'Montez', cursive;
+    font-size: 1.5em;
+    padding: .25em;
     border-radius: 2px;
-    margin: .1em;
-    width: 100%;
+    margin: 1em;
+    width: 10em;
   }
 
   .card button:hover {
     background-color: #9FB498;
+  }
+
+  /*Friends to Add Section*/
+  .friends-to-add-cards {
+    background:  #fefaee;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .friends-to-add-cards h3 {
+    font-family: 'Amarante', cursive;
+    font-size: 2.5em;
+    color: #e6be67;
+    margin: 1.25em;
+  }
+
+  .friendsCardContent {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    background: #fefaee;
+    margin-bottom: 1em;
+    flex: 0 1 24%;
+    width: 20em;
+    height: 10em;
+    padding: .25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .addMoreFriendsList{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
