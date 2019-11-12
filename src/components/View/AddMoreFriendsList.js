@@ -23,7 +23,7 @@ import React, { Component } from 'react'
     render(){
         return(
             <>
-            <div className="friendsList">
+            <div className="addMoreFriendsList">
                 {this.state.users.map(users =>
                     <AddMoreFriendsCard
                         updateCurrentGroupUserState={this.props.updateCurrentGroupUserState}

@@ -21,13 +21,12 @@ class AddMoreFriendsCard extends Component {
     }
   render() {
     return (
-      <div className="friendsList">
+      // <div className="friends">
         <div className="friendsCardContent">
-
         <h2><span className="friend-name">{this.props.users.user_name}</span></h2>
           <button className="addBtn" type="button" onClick={this.onAddClick}>Add To Collective</button>
         </div>
-      </div>
+      // </div>
     );
   }
 }
