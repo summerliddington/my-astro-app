@@ -195,6 +195,11 @@
       "group_name": "Family",
       "userId": 1,
       "id": 4
+    },
+    {
+      "group_name": "UX Cohort 35",
+      "userId": 1,
+      "id": 5
     }
   ],
   "groupUsers": [
@@ -262,6 +267,51 @@
       "groupId": 4,
       "userId": 1,
       "id": 23
+    },
+    {
+      "groupId": 5,
+      "userId": 1,
+      "id": 24
+    },
+    {
+      "groupId": 5,
+      "userId": 4,
+      "id": 25
+    },
+    {
+      "groupId": 5,
+      "userId": 5,
+      "id": 26
+    },
+    {
+      "groupId": 5,
+      "userId": 14,
+      "id": 27
+    },
+    {
+      "groupId": 5,
+      "userId": 15,
+      "id": 28
+    },
+    {
+      "groupId": 5,
+      "userId": 16,
+      "id": 29
+    },
+    {
+      "groupId": 5,
+      "userId": 17,
+      "id": 30
+    },
+    {
+      "groupId": 5,
+      "userId": 18,
+      "id": 31
+    },
+    {
+      "groupId": 5,
+      "userId": 19,
+      "id": 32
     }
   ],
   "sunsigns": [
