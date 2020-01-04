@@ -17,7 +17,7 @@
     margin-left: 5em;
 }
 .group_name {
-    font-family: 'Montez', cursive;
+    font-family: 'Amarante', cursive;
     font-size: 3em;
     color: #e6be67
 }
@@ -54,12 +54,12 @@
     border-bottom: .1em solid #e6be67;
 }
 .newWithFriendsContainer h2 {
-    font-family: 'Montez', cursive;
+    font-family: 'Amarante', cursive;
     color: #e6be67;;
     font-size: 2em;
 }
 .viewBtn {
-    font-family: 'Montez', cursive;
+    font-family: 'Raleway', sans-serif;
     color: #fefaee;
     font-size: 2em;
     background-color: #9FB498 !important;
@@ -80,7 +80,7 @@
     height: 100%;
 }
 .addBtn {
-    font-family: 'Montez', cursive;
+    font-family: 'Raleway', sans-serif;
     color: #fefaee;
     font-size: 1.25em;
     background-color: #9FB498 !important;

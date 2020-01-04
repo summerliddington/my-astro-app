@@ -62,9 +62,10 @@ class ViewCollectiveList extends Component {
 
     render(){
         return(
+            <div className="divWrap">
             <>
-            <div className="view-collective-container">
-                <h3>{this.state.group_name} </h3>
+           
+                <h3>{this.state.group_name}</h3>
                 <div className="view-collective-cards">
                     {this.state.groupUsers.map(groupUsers =>
                         <ViewCollectiveCard
@@ -81,8 +82,9 @@ class ViewCollectiveList extends Component {
                         key={this.state.groupId}
                         groupId={this.state.groupId} />
                 </div>
-            </div>
+            
             </>
+            </div>
         )
     }
 }

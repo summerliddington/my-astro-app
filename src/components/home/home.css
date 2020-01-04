@@ -30,10 +30,10 @@
 .myProfileCardContent h2 {
     color: #fefaee;
     font-size: 2.5em;
-    font-family: 'Montez', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 .editButton {
-    font-family: 'Montez', cursive;
+    font-family: 'Raleway', sans-serif;
     color: #fefaee;
     font-size: 2em;
     background-color: #9FB498 !important;
@@ -69,7 +69,7 @@
 } */
 
 .newButton {
-    font-family: 'Montez', cursive;
+    font-family: 'Raleway', sans-serif;
     color: #fefaee;
     font-size: 2em;
     background-color: #9FB498 !important;
@@ -93,7 +93,7 @@
 .myCollectivesCardContent h3 {
     color: #e6be67;
     font-size: 3em;
-    font-family: 'Montez', cursive;
+    font-family: 'Amarante', cursive;
     margin: .25em;
 }
 /* .myCollectivesCardContent {
@@ -116,7 +116,7 @@
 
 }
 .deleteButton {
-    font-family: 'Montez', cursive;
+    font-family: 'Raleway', sans-serif;
     color: #fefaee;
     font-size: 1.5em;
     background-color: #9FB498 !important;
@@ -126,7 +126,7 @@
     border-radius: 2px;
 }
 .viewButton {
-    font-family: 'Montez', cursive;
+    font-family: 'Raleway', sans-serif;
     color: #fefaee;
     font-size: 1.5em;
     background-color: #9FB498 !important;
