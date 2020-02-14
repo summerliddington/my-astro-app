@@ -13,7 +13,7 @@ Reasoning behind this idea: When groups of people come together for a reason itâ
 How might we create an application that allows atrology enthusiasts compare natal charts of more than 2 people?
 
 ## Personas
-
+![](RM-images/bonniepersona.png)
 ## Wireframes
 ![](RM-images/paperwireframes.jpeg)
 ## Mockups via Figma
@@ -24,6 +24,13 @@ https://dbdiagram.io/d/5da8a99502e6e93440f2579d
 
 ## To View:
 ### `npm start`
+How to Run this App
+Follow these steps exactly
+1. clone this repository.
+2. cd into the directory it creates.
+3. Make a database.json file in the api directory.
+4. Run npm install and wait for all dependencies to be installed.
+5. Run npm start to verify that installation was successful
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
