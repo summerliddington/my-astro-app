@@ -13,14 +13,14 @@ Reasoning behind this idea: When groups of people come together for a reason itâ
 How might we create an application that allows atrology enthusiasts compare natal charts of more than 2 people?
 
 ## Personas
-![](RM-images/bonniepersona.png)
+![](RM-images/.png)
 ## Wireframes
 ![](RM-images/paperwireframes.jpeg)
 ## Mockups via Figma
 ![](RM-images/astrofigma.png)
 
 ## ERD
-https://dbdiagram.io/d/5da8a99502e6e93440f2579d
+![](RM-images/AstroERD.png)
 
 ## To View:
 ### `npm start`
